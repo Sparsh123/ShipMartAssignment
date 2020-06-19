@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ShipMart</string>
+    <string name="intro_txt">The amount of money you can save in multiple ways can surprise you. You can save by
+        saving your lumpsum eligible for saving, and you can save by cutting down your expenses by various
+        percentages.
+    We\'ll show you a textual and graphical analysis of your twp different ways of saving and how
+    they relate. </string>
+    <string name="monthly_salary_text">Place your monthly salary here ...</string>
+    <string name="go_txt">Go</string>
+
+
+
+</resources>
