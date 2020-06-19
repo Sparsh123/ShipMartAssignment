@@ -7,6 +7,47 @@
     they relate. </string>
     <string name="monthly_salary_text">Place your monthly salary here ...</string>
     <string name="go_txt">Go</string>
+    <string name="expenses_txt">Please provide some of your expenses: </string>
+    <string name="dairy">Dairy (Milk, Butter, Curd etc.) </string>
+    <string name="daily">Daily </string>
+    <string name="monthly">Monthly </string>
+    <string name="weekly">Weekly </string>
+    <string name="meat">Meat, Fish and Eggs </string>
+    <string name="fruits">Fruits and Vegetables </string>
+    <string name="street_food">Street Food </string>
+    <string name="cafe">Cafe</string>
+    <string name="pub">Pub</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="clothes">Clothes</string>
+    <string name="footwear">Footwear</string>
+    <string name="daal">Daal, Masala and Oil</string>
+    <string name="bakery">Bakery</string>
+    <string name="beverages">Beverages</string>
+    <string name="snacks">Snacks and Branded Food</string>
+    <string name="beauty">Beauty and Hygiene</string>
+    <string name="cleaning">Cleaning and Household Goods</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="babycare">Babycare</string>
+    <string name="transport_out">Transport (Outstation) </string>
+    <string name="transport_in">Transport (Inter City) </string>
+    <string name="others">Others</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
