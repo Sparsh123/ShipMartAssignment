@@ -102,12 +102,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cvSalary" />
 
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvExpenses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/bg_edittext"
+                android:paddingBottom="50dp"
                 android:orientation="vertical"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="10dp"
@@ -121,14 +123,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                <LinearLayout
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="@string/expenses_txt"
+                        android:textColor="@color/lightPurple"
+                        android:textSize="18sp"
+                         />
+
+                    <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvDairy"
-                    android:layout_width="wrap_content"
+                    android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:text="@string/dairy"
                     android:layout_marginTop="5dp"
@@ -170,23 +183,24 @@
                </LinearLayout>
            </RadioGroup>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/tvDairy"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/tvMeat"
+                        android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/dairy"
+                        android:text="@string/meat"
                         android:layout_marginTop="5dp"
                         app:layout_constraintEnd_toStartOf="@id/rgDairy"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toLeftOf="@id/rgDairy"
                         app:layout_constraintStart_toStartOf="parent" />
                     <RadioGroup
-                        android:id="@+id/rgDairy"
+                        android:id="@+id/rgMeat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -225,17 +239,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvFruits"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/fruits"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgFruits"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -274,17 +288,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvStreetFood"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/street_food"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgStreetFood"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -323,17 +337,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvCafe"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/cafe"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgCafe"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -372,17 +386,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvPub"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/pub"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgPub"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -421,17 +435,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvRestaurant"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/restaurant"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgRestaurant"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -470,17 +484,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvClothes"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/clothes"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgClothes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -519,17 +533,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvFootwear"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/footwear"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgFootwear"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -568,17 +582,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvDaal"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/daal"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgDaal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -617,17 +631,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvBakery"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/bakery"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgBakery"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -666,17 +680,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvBeverages"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/beverages"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgBeverages"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -715,17 +729,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvSnacks"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/snacks"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgSnacks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -764,17 +778,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvBeauty"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/beauty"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgBeauty"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -813,17 +827,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvCleaning"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/cleaning"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgCleaning"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -862,17 +876,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvKitchen"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/kitchen"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgKitchen"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -911,17 +925,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvBabyCare"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/babycare"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgBabyCare"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -960,17 +974,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvTransOut"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/transport_out"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgTransOut"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -1009,17 +1023,17 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvTransIn"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/transport_in"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgTransIn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -1055,20 +1069,21 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                       android:layout_marginBottom="50dp"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvDairy"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/tvOthers"
+                            android:layout_width="180dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/dairy"
+                            android:text="@string/others"
                             android:layout_marginTop="5dp"
                             app:layout_constraintEnd_toStartOf="@id/rgDairy"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toLeftOf="@id/rgDairy"
                             app:layout_constraintStart_toStartOf="parent" />
                         <RadioGroup
-                            android:id="@+id/rgDairy"
+                            android:id="@+id/rgOthers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -1101,10 +1116,34 @@
                             </LinearLayout>
                         </RadioGroup>
                     </LinearLayout>
+
 
 
                 </LinearLayout>
+
+
             </androidx.cardview.widget.CardView>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/cvExpenses">
+    <Button
+        android:id="@+id/btnSubExpenses"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button_round_corner"
+        android:text="@string/go_txt"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
