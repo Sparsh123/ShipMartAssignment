@@ -38,6 +38,16 @@
                 android:textSize="18sp"
                 />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/meaning_txt"
+                android:textColor="@color/purple"
+                android:textSize="18sp"
+                />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,6 +96,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvDairyAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                   />
             </LinearLayout>
 
             <LinearLayout
@@ -136,6 +155,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvMeatAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -185,6 +213,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvFruitsAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -234,6 +271,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvStreetFoodAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -283,6 +329,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvCafeAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -332,6 +387,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvPubAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -381,6 +445,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvRestaurantAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -430,6 +503,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvClothesAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -479,6 +561,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvFootwearAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -528,6 +619,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvDaalAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -577,6 +677,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvBakeryAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -626,6 +735,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvBeveragesAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -675,6 +793,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvSnacksAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -724,6 +851,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvBeautyAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -773,6 +909,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvCleaningAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -822,6 +967,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvKitchenAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -871,6 +1025,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvBabyCareAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -920,6 +1083,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvTransOutAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -969,6 +1141,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvTransInAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -1019,6 +1200,15 @@
                             android:text="@string/monthly"/>
                     </LinearLayout>
                 </RadioGroup>
+                <TextView
+                    android:id="@+id/tvOthersAmt"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    tools:text="2500"
+                    android:layout_marginTop="5dp"
+                    />
             </LinearLayout>
 
 
@@ -1042,8 +1232,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cvExpenses"/>
-
-
 
 
 </LinearLayout>
