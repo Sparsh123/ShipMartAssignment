@@ -81,14 +81,14 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tvTotExpenseTxt"
+                                android:id="@+id/tvSalaryTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="Your Monthly Salary" />
 
                             <TextView
-                                android:id="@+id/tvTotExpense"
+                                android:id="@+id/tvSalary"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -111,14 +111,14 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/tvTotSavingTxt"
+                                android:id="@+id/tvSavingTxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:text="Your Monthly Savings" />
 
                             <TextView
-                                android:id="@+id/tvTotSaving"
+                                android:id="@+id/tvSaving"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
