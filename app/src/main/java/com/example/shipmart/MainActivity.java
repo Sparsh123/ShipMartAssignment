@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
             rgFootwear, rgDaal, rgBakery, rgBeverages, rgSnacks, rgBeauty, rgCleaning, rgKitchen, rgBabyCare,
             rgTransIn, rgTransOut, rgOthers;
 
-    double salary, dairyExp = 0, meatExp = 0, fruitsExp = 0, streetFoodExp = 0, cafeExp = 0, pubExp = 0,
+    double salary=0, saving=0, dairyExp = 0, meatExp = 0, fruitsExp = 0, streetFoodExp = 0, cafeExp = 0, pubExp = 0,
             restaurantExp = 0, clothesExp = 0,
             footwearExp = 0, daalExp = 0, bakeryExp = 0, beveragesExp = 0, snacksExp = 0, beautyExp = 0,
             cleaningExp = 0, kitchenExp = 0,
             babyCareExp = 0,
             transInExp = 0, transOutExp = 0, othersExp = 0;
-    TextView tvSalary, tvSaving;
-
+    TextView tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
+    SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
     Button btnSubmitExp, btnGo, btnPrint;
     View expensesScreen, outputScreen;
 
@@ -81,6 +82,18 @@ public class MainActivity extends AppCompatActivity {
         btnPrint = findViewById(R.id.btnPrint);
         tvSalary = findViewById(R.id.tvSalary);
         tvSaving = findViewById(R.id.tvSaving);
+        sb10=findViewById(R.id.sb10);
+        sb20=findViewById(R.id.sb20);
+        sb30=findViewById(R.id.sb30);
+        sb50=findViewById(R.id.sb50);
+        sb75=findViewById(R.id.sb75);
+        sb100=findViewById(R.id.sb100);
+        tv10=findViewById(R.id.tv10);
+        tv20=findViewById(R.id.tv20);
+        tv30=findViewById(R.id.tv30);
+        tv50=findViewById(R.id.tv50);
+        tv75=findViewById(R.id.tv75);
+        tv100=findViewById(R.id.tv100);
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
 
@@ -98,7 +111,73 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSubmitExp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                outputScreen.setVisibility(View.VISIBLE);
+                tvSalary.setText(String.valueOf(salary));
+                saving = salary-getTotalExpense();
+                tvSaving.setText(String.valueOf(saving));
+
+            }
+        });
+
+        seekBarChangeSalarySaveTrack(sb50, tv50);
+        seekBarChangeSalarySaveTrack(sb75, tv75);
+        seekBarChangeSalarySaveTrack(sb100, tv100);
+        seekBarChangeExpenseSaveTrack(sb10, tv10);
+        seekBarChangeExpenseSaveTrack(sb20, tv20);
+        seekBarChangeExpenseSaveTrack(sb30, tv30);
+
+
     }
+
+    private void seekBarChangeSalarySaveTrack(SeekBar sb, final TextView tv)
+    {
+        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+
+                tv.setText(String.valueOf((progress*salary)/100));
+                Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"Seekbar Touch Started!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"Seekbar Touch Stopped!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void seekBarChangeExpenseSaveTrack(SeekBar sb, final TextView tv)
+    {
+        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+
+                tv.setText(String.valueOf((progress*saving)/100));
+                Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"Seekbar Touch Started!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(),"Seekbar Touch Stopped!", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 
     private String getExpenseType(RadioGroup rg) {
         // get selected radio button from radioGroup

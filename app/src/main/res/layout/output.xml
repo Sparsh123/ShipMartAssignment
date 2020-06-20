@@ -165,12 +165,14 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:id="@+id/sb50"
+                                android:layout_width="0dp"                                android:layout_height="wrap_content"
                                 android:layout_weight="2"
+                                android:progress="50"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv50"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -185,12 +187,15 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
+                                android:id="@+id/sb75"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:progress="75"
                                 android:layout_weight="2"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv75"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -205,12 +210,15 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
+                                android:id="@+id/sb100"
+                                android:layout_width="0dp"
+                                android:progress="100"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv100"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -246,12 +254,15 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
+                                android:id="@+id/sb10"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:progress="10"
                                 android:layout_weight="2"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv10"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -266,12 +277,15 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
+                                android:id="@+id/sb20"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:progress="20"
                                 android:layout_weight="2"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv20"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -286,12 +300,15 @@
                             android:orientation="horizontal">
 
                             <SeekBar
-                                android:layout_width="match_parent"
+                                android:id="@+id/sb30"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:progress="30"
                                 android:layout_weight="2"
                                 android:padding="5dp" />
 
                             <TextView
+                                android:id="@+id/tv30"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
