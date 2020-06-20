@@ -12,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:id="@+id/cvOutput"
@@ -41,7 +41,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:fontFamily="@font/campton_book"
                     android:text="@string/thanks"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     android:textColor="@color/lightPurple" />
 
                 <TextView
@@ -49,6 +52,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/campton_book"
                     android:text="@string/output_intro" />
 
                 <androidx.cardview.widget.CardView
@@ -85,6 +90,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
+                                android:fontFamily="@font/campton_book"
                                 android:text="Your Monthly Salary" />
 
                             <TextView
@@ -92,6 +98,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:fontFamily="@font/campton_book"
                                 android:gravity="center"
                                 android:textColor="@color/purple"
                                 android:textSize="20sp"
@@ -115,6 +122,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
+                                android:fontFamily="@font/campton_book"
                                 android:text="Your Monthly Savings" />
 
                             <TextView
@@ -123,6 +131,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:gravity="start"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/blue"
                                 android:textSize="20sp"
                                 tools:text="Rs. 25000" />
@@ -156,6 +165,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
+                            android:fontFamily="@font/campton_book"
                             android:text="@string/save_lumpsum" />
 
                         <LinearLayout
@@ -177,6 +187,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/blue"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -200,6 +211,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/blue"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -223,6 +235,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/blue"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -246,6 +259,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
+                            android:fontFamily="@font/campton_book"
                             android:text="@string/save_expense" />
 
                         <LinearLayout
@@ -267,6 +281,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -290,6 +305,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -313,6 +329,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
+                                android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
                         </LinearLayout>
@@ -325,6 +342,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="45dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/campton_book"
                     android:layout_marginBottom="45dp"
                     android:text="@string/graph_text" />
 
@@ -336,6 +355,7 @@
                 <Button
                     android:id="@+id/btnPrint"
                     android:layout_width="180dp"
+                    android:fontFamily="@font/campton_book"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_button_round_corner"
                     android:text="@string/print"
@@ -360,6 +380,7 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/campton_book"
                     android:textStyle="bold"
                     android:text="About Us" />
 
@@ -369,6 +390,7 @@
                     android:layout_weight="1"
                     android:layout_marginTop="45dp"
                     android:gravity="left"
+                    android:fontFamily="@font/campton_book"
                     android:textColor="#00008B"
                     android:text="@string/about_us_text" />
             </LinearLayout>
