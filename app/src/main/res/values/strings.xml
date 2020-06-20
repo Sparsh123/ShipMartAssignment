@@ -32,6 +32,11 @@
     <string name="transport_out">Transport (Outstation) </string>
     <string name="transport_in">Transport (Inter City) </string>
     <string name="others">Others</string>
+    <string name="thanks">Thank you for your submission</string>
+    <string name="output_intro">This is a short graphical representation of your savings and expenses</string>
+    <string name="save_lumpsum">How much would you save if you saved in lumpsum percentages?</string>
+    <string name="save_expense">How much would you save if you saved a percentage of each expense?</string>
+
 
 
 
