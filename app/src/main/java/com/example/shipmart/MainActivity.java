@@ -12,6 +12,10 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
 public class MainActivity extends AppCompatActivity {
     EditText etSalary, etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
             etFootwear, etDaal, etBakery, etBeverages, etSnacks, etBeauty, etCleaning, etKitchen, etBabyCare,
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
     Button btnSubmitExp, btnGo, btnPrint;
     View expensesScreen, outputScreen;
+    double salarySaving =0, expenseSaving=0;
+    GraphView gvSaving;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         tv50=findViewById(R.id.tv50);
         tv75=findViewById(R.id.tv75);
         tv100=findViewById(R.id.tv100);
+        gvSaving = findViewById(R.id.gvSaving);
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
 
@@ -129,6 +136,15 @@ public class MainActivity extends AppCompatActivity {
         seekBarChangeExpenseSaveTrack(sb20, tv20);
         seekBarChangeExpenseSaveTrack(sb30, tv30);
 
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+                new DataPoint(1/12, getAmountAfterInvesting(1/12, 6)),
+                new DataPoint(1, getAmountAfterInvesting(1, 7)),
+                new DataPoint(5, getAmountAfterInvesting(5, 8)),
+                new DataPoint(10, getAmountAfterInvesting(10, 10)),
+                new DataPoint(20, getAmountAfterInvesting(20, 12))
+        });
+        gvSaving.addSeries(series);
+
 
     }
 
@@ -139,7 +155,8 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
 
-                tv.setText(String.valueOf((progress*salary)/100));
+                salarySaving = (progress*salary)/100;
+                tv.setText(String.valueOf(salarySaving));
                 Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
             }
 
@@ -162,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
 
-                tv.setText(String.valueOf((progress*saving)/100));
+                expenseSaving = (progress*saving)/100;
+                tv.setText(String.valueOf(expenseSaving));
                 Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
             }
 
@@ -222,5 +240,13 @@ public class MainActivity extends AppCompatActivity {
                 getIndividualExpense(rgBabyCare, etBabyCare)+ getIndividualExpense(rgTransOut, etTransOut)+
                 getIndividualExpense(rgTransIn, etTransIn)+ getIndividualExpense(rgOthers, etOthers);
         return exp;
+    }
+
+    private double getAmountAfterInvesting(double time, int rate)
+    {
+        double principle=0, interest=0;
+        principle = salarySaving + expenseSaving;
+        interest = (principle*time*rate)/100;
+        return (principle+interest);
     }
 }
