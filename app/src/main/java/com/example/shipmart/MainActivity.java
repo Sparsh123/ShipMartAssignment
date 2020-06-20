@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -111,8 +112,35 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter your salary", Toast.LENGTH_LONG)
                             .show();
                 } else {
-                    salary = Double.valueOf(etSalary.getText().toString());
+                    salary = Double.parseDouble(etSalary.getText().toString());
                     expensesScreen.setVisibility(View.VISIBLE);
+                    tvSalary.setText(String.valueOf(salary));
+                    saving = salary-getTotalExpense();
+                    tvSaving.setText(String.valueOf(saving));
+                    tv10.setText(String.valueOf((10*saving)/100));
+                    tv20.setText(String.valueOf((20*saving)/100));
+                    tv30.setText(String.valueOf((30*saving)/100));
+                    tv50.setText(String.valueOf((50*salary)/100));
+                    tv75.setText(String.valueOf((75*salary)/100));
+                    tv100.setText(String.valueOf((100*salary)/100));
+                    salarySaving = (50*salary)/100;
+                    expenseSaving = (10*saving)/100;
+
+                    seekBarChangeSalarySaveTrack(sb50, tv50);
+                    seekBarChangeSalarySaveTrack(sb75, tv75);
+                    seekBarChangeSalarySaveTrack(sb100, tv100);
+                    seekBarChangeExpenseSaveTrack(sb10, tv10);
+                    seekBarChangeExpenseSaveTrack(sb20, tv20);
+                    seekBarChangeExpenseSaveTrack(sb30, tv30);
+                    BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+                            new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+                            new DataPoint(1, getAmountAfterInvesting(1, 7)),
+                            new DataPoint(5, getAmountAfterInvesting(5, 8)),
+                            new DataPoint(10, getAmountAfterInvesting(10, 10)),
+                            new DataPoint(20, getAmountAfterInvesting(20, 12))
+                    });
+                    gvSaving.addSeries(series);
+
 
                 }
             }
@@ -125,34 +153,40 @@ public class MainActivity extends AppCompatActivity {
                 tvSalary.setText(String.valueOf(salary));
                 saving = salary-getTotalExpense();
                 tvSaving.setText(String.valueOf(saving));
+                tv10.setText(String.valueOf((10*saving)/100));
+                tv20.setText(String.valueOf((20*saving)/100));
+                tv30.setText(String.valueOf((30*saving)/100));
+                tv50.setText(String.valueOf((50*salary)/100));
+                tv75.setText(String.valueOf((75*salary)/100));
+                tv100.setText(String.valueOf((100*salary)/100));
+                salarySaving = (50*salary)/100;
+                expenseSaving = (10*saving)/100;
+
+                seekBarChangeSalarySaveTrack(sb50, tv50);
+                seekBarChangeSalarySaveTrack(sb75, tv75);
+                seekBarChangeSalarySaveTrack(sb100, tv100);
+                seekBarChangeExpenseSaveTrack(sb10, tv10);
+                seekBarChangeExpenseSaveTrack(sb20, tv20);
+                seekBarChangeExpenseSaveTrack(sb30, tv30);
+                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
+                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
+                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
+                        new DataPoint(20, getAmountAfterInvesting(20, 12))
+                });
+                gvSaving.addSeries(series);
 
             }
         });
 
-        tv10.setText(String.valueOf((10*saving)/100));
-        tv20.setText(String.valueOf((20*saving)/100));
-        tv30.setText(String.valueOf((30*saving)/100));
-        tv50.setText(String.valueOf((50*salary)/100));
-        tv75.setText(String.valueOf((75*salary)/100));
-        tv100.setText(String.valueOf((100*salary)/100));
-
-
-
-        seekBarChangeSalarySaveTrack(sb50, tv50);
-        seekBarChangeSalarySaveTrack(sb75, tv75);
-        seekBarChangeSalarySaveTrack(sb100, tv100);
-        seekBarChangeExpenseSaveTrack(sb10, tv10);
-        seekBarChangeExpenseSaveTrack(sb20, tv20);
-        seekBarChangeExpenseSaveTrack(sb30, tv30);
-
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(1/12, getAmountAfterInvesting(1/12, 6)),
-                new DataPoint(1, getAmountAfterInvesting(1, 7)),
-                new DataPoint(5, getAmountAfterInvesting(5, 8)),
-                new DataPoint(10, getAmountAfterInvesting(10, 10)),
-                new DataPoint(20, getAmountAfterInvesting(20, 12))
+        btnPrint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Printer Is Not Connected To Your Device", Toast.LENGTH_LONG).show();
+            }
         });
-        gvSaving.addSeries(series);
+
 
 
     }
@@ -171,12 +205,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getApplicationContext(),"Seekbar Touch Started!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getApplicationContext(),"Seekbar Touch Stopped!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -195,12 +227,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getApplicationContext(),"Seekbar Touch Started!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getApplicationContext(),"Seekbar Touch Stopped!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -220,15 +250,15 @@ public class MainActivity extends AppCompatActivity {
         double exp=0;
         if (getExpenseType(rg).equalsIgnoreCase("D")) {
             if (!et.getText().toString().matches("")) {
-               exp=  Double.valueOf(et.getText().toString()) * 30;
+               exp=  Double.parseDouble(et.getText().toString()) * 30;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("W")) {
             if (!et.getText().toString().matches("")) {
-                exp= Double.valueOf(et.getText().toString()) * 4.35;
+                exp= Double.parseDouble(et.getText().toString()) * 4.35;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("M")) {
             if (!et.getText().toString().matches("")) {
-                exp= Double.valueOf(et.getText().toString());
+                exp= Double.parseDouble(et.getText().toString());
             }
         }
 
