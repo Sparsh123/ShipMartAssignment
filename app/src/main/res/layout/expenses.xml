@@ -55,9 +55,11 @@
 
                 <TextView
                     android:id="@+id/tvDairy"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/dairy"
+                    android:textSize="12sp"
                     android:layout_marginTop="5dp"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -65,9 +67,11 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgDairy"
-                    android:layout_width="wrap_content"
+                    android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -75,26 +79,25 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
                             android:textSize="10sp"
                             android:text="@string/daily"/>
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDairyAmt"
@@ -105,6 +108,7 @@
                     tools:text="2500"
                     android:layout_marginTop="5dp"
                    />
+
             </LinearLayout>
 
             <LinearLayout
@@ -114,7 +118,8 @@
 
                 <TextView
                     android:id="@+id/tvMeat"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/meat"
                     android:layout_marginTop="5dp"
@@ -127,6 +132,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -134,10 +142,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -149,11 +154,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etMeatAmt"
@@ -172,7 +178,8 @@
 
                 <TextView
                     android:id="@+id/tvFruits"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/fruits"
                     android:layout_marginTop="5dp"
@@ -185,6 +192,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:checkedButton="@id/month3"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -192,10 +202,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -207,11 +214,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFruitsAmt"
@@ -230,7 +238,8 @@
 
                 <TextView
                     android:id="@+id/tvStreetFood"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/street_food"
                     android:layout_marginTop="5dp"
@@ -243,6 +252,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:checkedButton="@id/month4"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -250,10 +262,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -265,11 +274,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etStreetFoodAmt"
@@ -288,7 +298,8 @@
 
                 <TextView
                     android:id="@+id/tvCafe"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/cafe"
                     android:layout_marginTop="5dp"
@@ -301,6 +312,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -308,10 +322,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -323,11 +334,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCafeAmt"
@@ -346,7 +358,8 @@
 
                 <TextView
                     android:id="@+id/tvPub"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/pub"
                     android:layout_marginTop="5dp"
@@ -359,6 +372,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month6"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -366,10 +382,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -381,11 +394,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etPubAmt"
@@ -404,7 +418,8 @@
 
                 <TextView
                     android:id="@+id/tvRestaurant"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/restaurant"
                     android:layout_marginTop="5dp"
@@ -417,6 +432,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -424,10 +442,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -439,11 +454,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etRestaurantAmt"
@@ -462,7 +478,8 @@
 
                 <TextView
                     android:id="@+id/tvClothes"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/clothes"
                     android:layout_marginTop="5dp"
@@ -475,17 +492,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month8"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintStart_toEndOf="@id/tvDairy"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                   >
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -497,11 +513,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etClothesAmt"
@@ -520,7 +537,8 @@
 
                 <TextView
                     android:id="@+id/tvFootwear"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/footwear"
                     android:layout_marginTop="5dp"
@@ -533,6 +551,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month9"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -540,10 +561,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -555,11 +573,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFootwearAmt"
@@ -578,7 +597,8 @@
 
                 <TextView
                     android:id="@+id/tvDaal"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/daal"
                     android:layout_marginTop="5dp"
@@ -591,6 +611,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month10"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -598,10 +621,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -613,11 +633,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDaalAmt"
@@ -636,7 +657,7 @@
 
                 <TextView
                     android:id="@+id/tvBakery"
-                    android:layout_width="180dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/bakery"
                     android:layout_marginTop="5dp"
@@ -648,7 +669,10 @@
                     android:id="@+id/rgBakery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month11"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -656,10 +680,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -671,11 +692,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBakeryAmt"
@@ -694,7 +716,8 @@
 
                 <TextView
                     android:id="@+id/tvBeverages"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/beverages"
                     android:layout_marginTop="5dp"
@@ -707,6 +730,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month12"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -714,10 +740,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -729,11 +752,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeveragesAmt"
@@ -752,7 +776,8 @@
 
                 <TextView
                     android:id="@+id/tvSnacks"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/snacks"
                     android:layout_marginTop="5dp"
@@ -765,6 +790,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month13"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -772,10 +800,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -787,11 +812,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etSnacksAmt"
@@ -810,7 +836,8 @@
 
                 <TextView
                     android:id="@+id/tvBeauty"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/beauty"
                     android:layout_marginTop="5dp"
@@ -823,6 +850,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month14"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -830,10 +860,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -845,11 +872,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month14"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeautyAmt"
@@ -868,7 +896,8 @@
 
                 <TextView
                     android:id="@+id/tvCleaning"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/cleaning"
                     android:layout_marginTop="5dp"
@@ -881,6 +910,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month15"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -888,10 +920,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -903,11 +932,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month15"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCleaningAmt"
@@ -926,7 +956,8 @@
 
                 <TextView
                     android:id="@+id/tvKitchen"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/kitchen"
                     android:layout_marginTop="5dp"
@@ -939,6 +970,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month16"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -946,10 +980,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -961,11 +992,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month16"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etKitchenAmt"
@@ -984,7 +1016,8 @@
 
                 <TextView
                     android:id="@+id/tvBabyCare"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/babycare"
                     android:layout_marginTop="5dp"
@@ -997,6 +1030,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month17"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -1004,10 +1040,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1019,11 +1052,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month17"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBabyCareAmt"
@@ -1042,7 +1076,8 @@
 
                 <TextView
                     android:id="@+id/tvTransOut"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/transport_out"
                     android:layout_marginTop="5dp"
@@ -1055,6 +1090,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month18"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -1062,10 +1100,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1077,11 +1112,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month18"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransOutAmt"
@@ -1100,7 +1136,8 @@
 
                 <TextView
                     android:id="@+id/tvTransIn"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/transport_in"
                     android:layout_marginTop="5dp"
@@ -1113,6 +1150,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month19"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -1120,10 +1160,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1135,11 +1172,12 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month19"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransInAmt"
@@ -1159,7 +1197,8 @@
 
                 <TextView
                     android:id="@+id/tvOthers"
-                    android:layout_width="180dp"
+                    android:lines="3"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="@string/others"
                     android:layout_marginTop="5dp"
@@ -1172,6 +1211,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@id/month20"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toRightOf="@id/tvDairy"
                     app:layout_constraintRight_toRightOf="parent"
@@ -1179,10 +1221,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -1194,11 +1236,13 @@
                             android:textSize="10sp"
                             android:text="@string/weekly"/>
                         <RadioButton
+                            android:id="@+id/month20"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="10sp"
+                            android:checked="true"
                             android:text="@string/monthly"/>
-                    </LinearLayout>
+<!--                    </LinearLayout>-->
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etOthersAmt"

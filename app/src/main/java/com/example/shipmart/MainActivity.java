@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please enter your salary", Toast.LENGTH_LONG)
                             .show();
                 } else {
-                    salary = Integer.valueOf(etSalary.getText().toString());
+                    salary = Double.valueOf(etSalary.getText().toString());
                     expensesScreen.setVisibility(View.VISIBLE);
 
                 }
@@ -128,6 +128,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        tv10.setText(String.valueOf((10*saving)/100));
+        tv20.setText(String.valueOf((20*saving)/100));
+        tv30.setText(String.valueOf((30*saving)/100));
+        tv50.setText(String.valueOf((50*salary)/100));
+        tv75.setText(String.valueOf((75*salary)/100));
+        tv100.setText(String.valueOf((100*salary)/100));
+
+
 
         seekBarChangeSalarySaveTrack(sb50, tv50);
         seekBarChangeSalarySaveTrack(sb75, tv75);
@@ -211,15 +220,15 @@ public class MainActivity extends AppCompatActivity {
         double exp=0;
         if (getExpenseType(rg).equalsIgnoreCase("D")) {
             if (!et.getText().toString().matches("")) {
-               exp=  Integer.valueOf(etDairy.getText().toString()) * 30;
+               exp=  Double.valueOf(et.getText().toString()) * 30;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("W")) {
             if (!et.getText().toString().matches("")) {
-                exp= Integer.valueOf(etDairy.getText().toString()) * 4.35;
+                exp= Double.valueOf(et.getText().toString()) * 4.35;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("M")) {
             if (!et.getText().toString().matches("")) {
-                exp= Integer.valueOf(etDairy.getText().toString());
+                exp= Double.valueOf(et.getText().toString());
             }
         }
 
