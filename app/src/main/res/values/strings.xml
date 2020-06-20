@@ -8,6 +8,7 @@
     <string name="monthly_salary_text">Place your monthly salary here ...</string>
     <string name="go_txt">Go</string>
     <string name="submit">Submit</string>
+    <string name="print">Print</string>
     <string name="expenses_txt">Please provide some of your expenses: </string>
     <string name="dairy">Dairy (Milk, Butter, Curd etc.) </string>
     <string name="daily">Daily </string>
