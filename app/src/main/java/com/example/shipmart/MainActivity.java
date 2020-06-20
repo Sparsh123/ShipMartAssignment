@@ -139,7 +139,12 @@ public class MainActivity extends AppCompatActivity {
                             new DataPoint(10, getAmountAfterInvesting(10, 10)),
                             new DataPoint(20, getAmountAfterInvesting(20, 12))
                     });
+                    gvSaving.removeAllSeries();
                     gvSaving.addSeries(series);
+
+                    Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
+                            .show();
+
 
 
                 }
@@ -175,7 +180,11 @@ public class MainActivity extends AppCompatActivity {
                         new DataPoint(10, getAmountAfterInvesting(10, 10)),
                         new DataPoint(20, getAmountAfterInvesting(20, 12))
                 });
+                gvSaving.removeAllSeries();
                 gvSaving.addSeries(series);
+
+                Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
+                        .show();
 
             }
         });
@@ -200,7 +209,17 @@ public class MainActivity extends AppCompatActivity {
 
                 salarySaving = (progress*salary)/100;
                 tv.setText(String.valueOf(salarySaving));
-                Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
+                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
+                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
+                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
+                        new DataPoint(20, getAmountAfterInvesting(20, 12))
+                });
+                gvSaving.removeAllSeries();
+                gvSaving.addSeries(series);
+
+
             }
 
             @Override
@@ -222,7 +241,14 @@ public class MainActivity extends AppCompatActivity {
 
                 expenseSaving = (progress*saving)/100;
                 tv.setText(String.valueOf(expenseSaving));
-                Toast.makeText(getApplicationContext(),"Seekbar Progress: "+progress, Toast.LENGTH_SHORT).show();
+                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
+                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
+                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
+                        new DataPoint(20, getAmountAfterInvesting(20, 12))
+                });
+                gvSaving.addSeries(series);
             }
 
             @Override
