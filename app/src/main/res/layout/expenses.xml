@@ -15,13 +15,22 @@
           android:layout_height="match_parent"
           android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:gravity="center"
+              android:src="@drawable/expense_intro"
+
+              />
+
+          <androidx.cardview.widget.CardView
         android:id="@+id/cvExpenses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/bg_edittext"
         android:paddingBottom="50dp"
@@ -40,28 +49,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/campton_book"
-                android:gravity="center"
-                android:text="@string/expenses_txt"
-                android:textColor="@color/lightPurple"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/campton_book"
-                android:gravity="center"
-                android:text="@string/meaning_txt"
-                android:textColor="@color/purple"
-                android:textSize="18sp"
-                />
+            <!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:fontFamily="@font/campton_book"-->
+<!--                android:gravity="center"-->
+<!--                android:text="@string/meaning_txt"-->
+<!--                android:textColor="@color/purple"-->
+<!--                android:textSize="18sp"-->
+<!--                />-->
 
             <LinearLayout
                 android:layout_width="wrap_content"
