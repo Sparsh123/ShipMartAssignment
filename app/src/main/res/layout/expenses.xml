@@ -19,12 +19,15 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:layout_marginTop="20dp"
+              android:layout_marginLeft="25dp"
+              android:layout_marginRight="25dp"
               android:gravity="center"
               android:src="@drawable/expense_intro"
 
               />
 
           <androidx.cardview.widget.CardView
+              android:visibility="visible"
         android:id="@+id/cvExpenses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -1316,10 +1319,11 @@
 
           <ImageButton
               android:id="@+id/btnSubMitExp"
-              android:layout_width="218dp"
-              android:layout_height="125dp"
+              android:layout_width="131dp"
+              android:layout_height="67dp"
               android:layout_gravity="center"
               android:layout_marginBottom="10dp"
+              android:background="@color/white"
               android:scaleType="fitXY"
               android:src="@drawable/submit_exp"
               app:layout_constraintEnd_toEndOf="parent"

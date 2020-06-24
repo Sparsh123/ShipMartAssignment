@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
             transInExp = 0, transOutExp = 0, othersExp = 0;
     TextView tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
-    Button btnSubmitExp, btnGo, btnPrint;
+    Button  btnGo, btnPrint;
+    ImageButton ibSubmitExp;
     View expensesScreen, outputScreen;
     double salarySaving =0, expenseSaving=0;
     GraphView gvSaving;
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         rgTransOut = findViewById(R.id.rgTransOut);
         rgOthers = findViewById(R.id.rgOthers);
         btnGo = findViewById(R.id.btnGo);
-        btnSubmitExp = findViewById(R.id.btnSubMitExp);
+        ibSubmitExp = findViewById(R.id.btnSubMitExp);
         btnPrint = findViewById(R.id.btnPrint);
         tvSalary = findViewById(R.id.tvSalary);
         tvSaving = findViewById(R.id.tvSaving);
@@ -151,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnSubmitExp.setOnClickListener(new View.OnClickListener() {
+        ibSubmitExp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 outputScreen.setVisibility(View.VISIBLE);
