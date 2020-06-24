@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             cleaningExp = 0, kitchenExp = 0,
             babyCareExp = 0,
             transInExp = 0, transOutExp = 0, othersExp = 0;
-    TextView tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
+    TextView tvCriteria, tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
     Button  btnGo, btnPrint;
     ImageButton ibSubmitExp;
@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         tv50=findViewById(R.id.tv50);
         tv75=findViewById(R.id.tv75);
         tv100=findViewById(R.id.tv100);
+        tvCriteria=findViewById(R.id.tvCriteria);
         gvSaving = findViewById(R.id.gvSaving);
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
@@ -157,17 +158,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 outputScreen.setVisibility(View.VISIBLE);
-                tvSalary.setText(String.valueOf(salary));
+                tvSalary.setText("₹ "+String.valueOf(salary));
                 saving = salary-getTotalExpense();
-                tvSaving.setText(String.valueOf(saving));
-                tv10.setText(String.valueOf((10*saving)/100));
-                tv20.setText(String.valueOf((20*saving)/100));
-                tv30.setText(String.valueOf((30*saving)/100));
-                tv50.setText(String.valueOf((50*salary)/100));
-                tv75.setText(String.valueOf((75*salary)/100));
-                tv100.setText(String.valueOf((100*salary)/100));
+                tvSaving.setText("₹ "+String.valueOf(saving));
+                tv10.setText("₹ "+String.valueOf((10*saving)/100));
+                tv20.setText("₹ "+String.valueOf((20*saving)/100));
+                tv30.setText("₹ "+String.valueOf((30*saving)/100));
+                tv50.setText("₹ "+String.valueOf((50*salary)/100));
+                tv75.setText("₹ "+String.valueOf((75*salary)/100));
+                tv100.setText("₹ "+String.valueOf((100*salary)/100));
                 salarySaving = (50*salary)/100;
                 expenseSaving = (10*saving)/100;
+                tvCriteria.setText("*(₹ " + salary +" - "+ "₹ "+getTotalExpense()+")");
 
                 seekBarChangeSalarySaveTrack(sb50, tv50);
                 seekBarChangeSalarySaveTrack(sb75, tv75);

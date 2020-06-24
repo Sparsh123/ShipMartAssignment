@@ -18,7 +18,8 @@
             android:id="@+id/cvOutput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/bg_edittext"
             android:orientation="vertical"
             app:cardCornerRadius="4dp"
@@ -35,25 +36,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <ImageView
                     android:id="@+id/outTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="286dp"
+                    android:layout_height="49dp"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:fontFamily="@font/campton_book"
-                    android:text="@string/thanks"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/lightPurple" />
+                    android:padding="15dp"
+                    android:src="@drawable/output_intro_1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/campton_book"
+                    android:textSize="15sp"
                     android:text="@string/output_intro" />
 
                 <androidx.cardview.widget.CardView
@@ -87,7 +83,7 @@
 
                             <TextView
                                 android:id="@+id/tvSalaryTxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:fontFamily="@font/campton_book"
@@ -95,7 +91,7 @@
 
                             <TextView
                                 android:id="@+id/tvSalary"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:fontFamily="@font/campton_book"
@@ -107,9 +103,11 @@
 
                         <View
                             android:layout_width="2dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
                             android:background="#A9A9A9" />
+
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -119,7 +117,7 @@
 
                             <TextView
                                 android:id="@+id/tvSavingTxt"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
                                 android:fontFamily="@font/campton_book"
@@ -127,7 +125,7 @@
 
                             <TextView
                                 android:id="@+id/tvSaving"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:gravity="start"
@@ -135,6 +133,18 @@
                                 android:textColor="@color/blue"
                                 android:textSize="20sp"
                                 tools:text="Rs. 25000" />
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/tvCriteria"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="start"
+                                android:lines="2"
+                                android:fontFamily="@font/campton_book"
+                                android:textColor="#808080"
+                                android:textSize="10sp"
+                                tools:text="Rs. 25000-Rs. 4000" />
 
                         </LinearLayout>
 
