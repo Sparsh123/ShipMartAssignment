@@ -254,12 +254,13 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="2dp"
-                        android:layout_height="200dp"
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="230dp"
+                        android:layout_marginTop="110dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="#A9A9A9" />
+                        android:src="@drawable/line" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -276,12 +277,13 @@
                             android:layout_width="119dp"
                             android:layout_height="90dp"
                             android:gravity="center"
+                            android:layout_marginTop="18dp"
                             android:layout_gravity="center"
                             android:src="@drawable/illust2" />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="30dp"
                             android:orientation="horizontal">
 
                             <SeekBar
@@ -359,7 +361,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="45dp"
                     android:textSize="18sp"
-                    android:fontFamily="@font/campton_book"
                     android:layout_marginBottom="45dp"
                     android:text="@string/graph_text" />
 
