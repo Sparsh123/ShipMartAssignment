@@ -84,6 +84,7 @@
                     android:lines="3"
                     android:layout_width="0dp"
                     android:layout_weight="3"
+                    android:layout_marginRight="7dp"
                     android:layout_height="wrap_content"
                     android:text="@string/dairy"
                     android:fontFamily="@font/campton_book"
@@ -97,7 +98,7 @@
                     android:id="@+id/rgDairy"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_weight="3.5"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month"
@@ -176,7 +177,7 @@
                     android:id="@+id/etDairyAmt"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/bg_edittext_no_round"
                     android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
@@ -218,7 +219,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month2"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -278,7 +279,7 @@
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -312,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="3.5"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:checkedButton="@id/month3"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -368,7 +369,7 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -560,7 +561,7 @@
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -654,7 +655,7 @@
                     android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -748,7 +749,7 @@
                     android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -841,7 +842,7 @@
                     android:background="@drawable/bg_edittext_no_round"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -935,7 +936,7 @@
                     android:background="@drawable/bg_edittext_no_round"                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -969,7 +970,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="3.5"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month10"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1123,7 +1124,7 @@
                     tools:text="2500"
                     android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1217,7 +1218,7 @@
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1251,7 +1252,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month13"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1344,7 +1345,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month14"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1438,7 +1439,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month15"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1591,7 +1592,7 @@
                     android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1685,7 +1686,7 @@
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1718,7 +1719,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month18"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1811,7 +1812,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month19"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1905,7 +1906,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month20"
                     app:layout_constraintEnd_toEndOf="parent"
