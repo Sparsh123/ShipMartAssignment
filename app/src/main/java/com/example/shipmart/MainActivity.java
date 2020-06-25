@@ -35,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
             transInExp = 0, transOutExp = 0, othersExp = 0;
     TextView tvCriteria, tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
-    Button  btnGo;
-    ImageButton ibSubmitExp, ibPrint;
+    ImageButton ibSubmitExp, ibPrint, ibGo;
     View expensesScreen, outputScreen;
     double salarySaving =0, expenseSaving=0;
     GraphView gvSaving;
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         rgTransIn = findViewById(R.id.rgTransIn);
         rgTransOut = findViewById(R.id.rgTransOut);
         rgOthers = findViewById(R.id.rgOthers);
-        btnGo = findViewById(R.id.btnGo);
+        ibGo = findViewById(R.id.btnGo);
         ibSubmitExp = findViewById(R.id.btnSubMitExp);
         ibPrint = findViewById(R.id.btnPrint);
         tvSalary = findViewById(R.id.tvSalary);
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
 
-        btnGo.setOnClickListener(new View.OnClickListener() {
+        ibGo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (etSalary.getText().toString().matches("")) {
