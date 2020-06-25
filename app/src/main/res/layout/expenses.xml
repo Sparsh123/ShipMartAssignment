@@ -71,11 +71,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:text="a. "/>
 
                 <TextView
                     android:id="@+id/tvDairy"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/dairy"
                     android:fontFamily="@font/campton_book"
@@ -87,9 +95,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgDairy"
-                    android:layout_width="125dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_weight="3"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -121,8 +130,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDairyAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -133,16 +143,24 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:text="b. "/>
 
                 <TextView
                     android:id="@+id/tvMeat"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_marginTop="8dp"
+                    android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/meat"
                     android:fontFamily="@font/campton_book"
@@ -152,8 +170,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgMeat"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
@@ -186,8 +205,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etMeatAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -196,15 +216,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/blue"
+                    android:text="c. "/>
 
                 <TextView
                     android:id="@+id/tvFruits"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginTop="8dp"
                     android:text="@string/fruits"
                     android:fontFamily="@font/campton_book"
@@ -214,9 +242,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgFruits"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
                     android:layout_marginTop="10dp"
                     android:checkedButton="@id/month3"
                     android:orientation="horizontal"
@@ -248,9 +277,10 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFruitsAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
+                    android:layout_weight="2"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
@@ -258,15 +288,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="9dp"
+                    android:textColor="@color/blue"
+                    android:text="d. "/>
 
                 <TextView
                     android:id="@+id/tvStreetFood"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/street_food"
                     android:layout_marginTop="9dp"
                     android:fontFamily="@font/campton_book"
@@ -276,8 +314,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgStreetFood"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:checkedButton="@id/month4"
@@ -310,8 +349,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etStreetFoodAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -320,15 +360,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="4dp"
+                    android:text="e. "/>
 
                 <TextView
                     android:id="@+id/tvCafe"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/cafe"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/campton_book"
@@ -338,8 +386,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgCafe"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -372,8 +421,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCafeAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -382,15 +432,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/blue"
+                    android:layout_weight=".5"
+                    android:text="f. "/>
 
                 <TextView
                     android:id="@+id/tvPub"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/pub"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/campton_book"
@@ -400,9 +458,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgPub"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month6"
@@ -434,8 +493,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etPubAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
@@ -444,15 +504,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/blue"
+                    android:text="g. "/>
 
                 <TextView
                     android:id="@+id/tvRestaurant"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/restaurant"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/campton_book"
@@ -462,9 +530,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgRestaurant"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month7"
@@ -496,8 +565,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etRestaurantAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
@@ -506,15 +576,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:text="h. "/>
 
                 <TextView
                     android:id="@+id/tvClothes"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/clothes"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/campton_book"
@@ -524,9 +602,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgClothes"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month8"
@@ -557,8 +636,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etClothesAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -567,15 +647,24 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="4dp"
+                    android:text="i. "/>
+
+                <TextView
                     android:id="@+id/tvFootwear"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/footwear"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/campton_book"
@@ -585,8 +674,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgFootwear"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -619,8 +709,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFootwearAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -629,16 +720,24 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="j. "/>
 
                 <TextView
                     android:id="@+id/tvDaal"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:fontFamily="@font/campton_book"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/daal"
                     android:layout_marginTop="2dp"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
@@ -647,9 +746,10 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgDaal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_weight="3"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month10"
@@ -681,8 +781,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDaalAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
@@ -691,14 +792,22 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="4dp"
+                    android:text="k. "/>
 
                 <TextView
                     android:id="@+id/tvBakery"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/bakery"
                     android:lines="1"
                     android:layout_marginTop="4dp"
@@ -709,8 +818,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgBakery"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
@@ -743,7 +853,8 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBakeryAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:gravity="center"
@@ -753,16 +864,24 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="l. "/>
 
                 <TextView
                     android:id="@+id/tvBeverages"
                     android:lines="1"
                     android:fontFamily="@font/campton_book"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/beverages"
                     android:layout_marginTop="2dp"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
@@ -771,8 +890,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgBeverages"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -805,8 +925,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeveragesAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -815,15 +936,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="3dp"
+                    android:text="m. "/>
 
                 <TextView
                     android:id="@+id/tvSnacks"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_marginTop="3dp"
+                    android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/snacks"
                     android:fontFamily="@font/campton_book"
@@ -833,8 +962,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgSnacks"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -867,8 +997,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etSnacksAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
@@ -877,15 +1008,22 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="n. "/>
                 <TextView
                     android:id="@+id/tvBeauty"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/beauty"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/campton_book"
@@ -895,8 +1033,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgBeauty"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -929,8 +1068,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeautyAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -939,15 +1079,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="3dp"
+                    android:text="o. "/>
 
                 <TextView
                     android:id="@+id/tvCleaning"
-                    android:lines="3"
-                    android:layout_width="120dp"
+                    android:lines="4"
+                    android:layout_width="0dp"
                     android:layout_marginTop="3dp"
+                    android:layout_weight="3"
                     android:fontFamily="@font/campton_book"
                     android:layout_height="wrap_content"
                     android:text="@string/cleaning"
@@ -957,8 +1105,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgCleaning"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -991,8 +1140,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCleaningAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -1001,14 +1151,21 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="4dp"
+                    android:text="p. "/>
                 <TextView
                     android:id="@+id/tvKitchen"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/kitchen"
                     android:layout_marginTop="4dp"
@@ -1019,8 +1176,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgKitchen"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1053,8 +1211,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etKitchenAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
@@ -1063,15 +1222,23 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="q. "/>
 
                 <TextView
                     android:id="@+id/tvBabyCare"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:text="@string/babycare"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/campton_book"
@@ -1081,8 +1248,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgBabyCare"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1115,8 +1283,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBabyCareAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -1125,15 +1294,22 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="r. "/>
                 <TextView
                     android:id="@+id/tvTransOut"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_marginTop="2dp"
+                    android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/campton_book"
                     android:text="@string/transport_out"
@@ -1143,8 +1319,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgTransOut"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1177,8 +1354,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransOutAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -1187,15 +1365,22 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:text="s. "/>
                 <TextView
                     android:id="@+id/tvTransIn"
                     android:lines="3"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginTop="2dp"
                     android:text="@string/transport_in"
                     android:fontFamily="@font/campton_book"
@@ -1205,8 +1390,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgTransIn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1239,8 +1425,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransInAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
@@ -1249,15 +1436,22 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="50dp"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="4dp"
+                    android:text="t. "/>
                 <TextView
                     android:id="@+id/tvOthers"
                     android:lines="1"
-                    android:layout_width="120dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
                     android:layout_height="match_parent"
                     android:text="@string/others"
                     android:fontFamily="@font/campton_book"
@@ -1268,8 +1462,9 @@
                     app:layout_constraintStart_toStartOf="parent" />
                 <RadioGroup
                     android:id="@+id/rgOthers"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1306,8 +1501,9 @@
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etOthersAmt"
-                    android:layout_width="70dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:padding="5dp"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
