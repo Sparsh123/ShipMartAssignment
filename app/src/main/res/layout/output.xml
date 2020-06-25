@@ -74,10 +74,10 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal"
-                        android:weightSum="5">
+                        >
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
                             android:orientation="vertical">
@@ -110,7 +110,7 @@
 
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
                             android:orientation="vertical">
@@ -317,7 +317,7 @@
                                 android:id="@+id/tv10"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="1.3"
                                 android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
@@ -345,7 +345,7 @@
                                 android:id="@+id/tv20"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="1.3"
                                 android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
@@ -373,7 +373,7 @@
                                 android:id="@+id/tv30"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_weight="1.3"
                                 android:fontFamily="@font/campton_book"
                                 android:textColor="@color/purple"
                                 tools:text="Rs. 25000" />
@@ -486,7 +486,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="164dp"
+                    android:layout_height="270dp"
                     android:layout_gravity="center|bottom"
                     android:layout_marginTop="65dp"
                     android:scaleType="fitXY"

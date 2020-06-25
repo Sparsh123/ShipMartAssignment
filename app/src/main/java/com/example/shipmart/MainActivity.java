@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
                                           boolean fromUser) {
 
                 salarySaving = (progress*salary)/100;
-                tv.setText(String.valueOf(salarySaving));
+                tv.setText("₹ "+ String.valueOf(salarySaving));
                 BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
                         new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
                         new DataPoint(1, getAmountAfterInvesting(1, 7)),
@@ -255,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
                                           boolean fromUser) {
 
                 expenseSaving = (progress*saving)/100;
-                tv.setText(String.valueOf(expenseSaving));
+                tv.setText("₹ " + String.valueOf(expenseSaving));
                 BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
                         new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
                         new DataPoint(1, getAmountAfterInvesting(1, 7)),
