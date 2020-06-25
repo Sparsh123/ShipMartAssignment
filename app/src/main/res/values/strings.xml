@@ -39,8 +39,10 @@
     <string name="save_lumpsum">How much would you save if you saved in lumpsum percentages?</string>
     <string name="save_expense">How much would you save if you saved a percentage of each expense?</string>
     <string name="graph_text">Here is some comparison if you could invest these savings for:</string>
-    <string name="about_us_text">We are a group of driven and innovative people committed to make your financial
-    management easier, efficient and reliable</string>
+    <string name="about_us_text">Lorem Ipsum Dolat Sit Amet\n\nWe are a group of driven and innovative people committed to make your financial
+    management easier, efficient and reliable Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet
+    \nLorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet
+    Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet Lorem Ipsum Dolat Sit Amet</string>
 
 
 
