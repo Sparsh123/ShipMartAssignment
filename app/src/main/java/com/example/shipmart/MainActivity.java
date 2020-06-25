@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
             transInExp = 0, transOutExp = 0, othersExp = 0;
     TextView tvCriteria, tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
-    Button  btnGo, btnPrint;
-    ImageButton ibSubmitExp;
+    Button  btnGo;
+    ImageButton ibSubmitExp, ibPrint;
     View expensesScreen, outputScreen;
     double salarySaving =0, expenseSaving=0;
     GraphView gvSaving;
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         rgOthers = findViewById(R.id.rgOthers);
         btnGo = findViewById(R.id.btnGo);
         ibSubmitExp = findViewById(R.id.btnSubMitExp);
-        btnPrint = findViewById(R.id.btnPrint);
+        ibPrint = findViewById(R.id.btnPrint);
         tvSalary = findViewById(R.id.tvSalary);
         tvSaving = findViewById(R.id.tvSaving);
         sb10=findViewById(R.id.sb10);
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnPrint.setOnClickListener(new View.OnClickListener() {
+        ibPrint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Printer Is Not Connected To Your Device", Toast.LENGTH_LONG).show();

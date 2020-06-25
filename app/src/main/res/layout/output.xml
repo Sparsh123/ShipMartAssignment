@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <androidx.cardview.widget.CardView
-            android:visibility="gone"
+            android:visibility="visible"
             android:id="@+id/cvOutput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -370,18 +370,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dip" />
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnPrint"
-                    android:layout_width="180dp"
-                    android:fontFamily="@font/campton_book"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_button_round_corner"
-                    android:text="@string/print"
-                    android:textColor="@color/white"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                  />
+                    android:background="@color/white"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/print" />
 
 
             </LinearLayout>
