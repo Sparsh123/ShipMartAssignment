@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:layout_marginTop="5dp"
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -14,16 +15,9 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="vertical">
-
-          <ImageView
-              android:layout_width="310dp"
-              android:layout_height="84dp"
-              android:layout_marginLeft="25dp"
-              android:layout_marginTop="20dp"
-              android:gravity="center"
-              android:src="@drawable/expense_intro"
-
-              />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
           <androidx.cardview.widget.CardView
               android:visibility="visible"
@@ -44,9 +38,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnGo">
+        app:layout_constraintTop_toBottomOf="parent">
 
-        <LinearLayout
+
+              <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -61,6 +56,16 @@
 <!--                android:textColor="@color/purple"-->
 <!--                android:textSize="18sp"-->
 <!--                />-->
+
+                  <ImageView
+                      android:layout_width="310dp"
+                      android:layout_height="84dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginTop="20dp"
+                      android:gravity="center"
+                      android:src="@drawable/expense_intro"
+
+                      />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -1317,6 +1322,7 @@
 
 
     </androidx.cardview.widget.CardView>
+</RelativeLayout>
 
           <ImageButton
               android:id="@+id/btnSubMitExp"
@@ -1324,8 +1330,10 @@
               android:layout_height="67dp"
               android:layout_gravity="center"
               android:layout_marginBottom="10dp"
+              android:layout_below="@id/cvExpenses"
               android:background="@color/white"
               android:scaleType="fitXY"
+              android:layout_marginTop="-75dp"
               android:src="@drawable/submit_exp"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintLeft_toLeftOf="parent"
