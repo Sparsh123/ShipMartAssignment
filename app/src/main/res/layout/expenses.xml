@@ -98,7 +98,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -109,35 +109,79 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
+<!--                        <RadioButton-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="5dp"-->
+<!--                            android:textSize="10sp"-->
+<!--                            android:background="@drawable/radio_background"-->
+<!--                            android:text="@string/daily"/>-->
+<!--                        <RadioButton-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/radio_background"-->
+<!--                           android:gravity="center"-->
+<!--                            android:textSize="10sp"-->
 
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/monthly"/>
+<!--                            android:text="@string/weekly"/>-->
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/month"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textSize="10sp"-->
+<!--                            android:background="@drawable/radio_background"-->
+
+<!--                            android:text="@string/monthly"/>-->
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDairyAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edittext_no_round"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
                    />
 
             </LinearLayout>
@@ -172,7 +216,7 @@
                     android:id="@+id/rgMeat"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
@@ -185,34 +229,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month2"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etMeatAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/bg_edittext_no_round"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -245,7 +311,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="10dp"
                     android:checkedButton="@id/month3"
                     android:orientation="horizontal"
@@ -257,34 +323,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month3"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFruitsAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_weight="2"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -316,7 +404,7 @@
                     android:id="@+id/rgStreetFood"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp"
                     android:checkedButton="@id/month4"
@@ -329,34 +417,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month4"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etStreetFoodAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -388,7 +498,7 @@
                     android:id="@+id/rgCafe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -401,34 +511,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month5"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCafeAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -461,7 +593,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month6"
@@ -473,34 +605,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month6"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etPubAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -533,7 +687,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month7"
@@ -545,34 +699,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month7"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etRestaurantAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -605,7 +781,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month8"
@@ -616,34 +792,56 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                    >
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month8"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etClothesAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -676,7 +874,7 @@
                     android:id="@+id/rgFootwear"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -689,34 +887,55 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month9"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etFootwearAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
-                    android:fontFamily="@font/campton_book"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/bg_edittext_no_round"                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -749,7 +968,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:checkedButton="@id/month10"
@@ -761,34 +980,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month10"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etDaalAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -820,7 +1061,7 @@
                     android:id="@+id/rgBakery"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
@@ -833,34 +1074,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month11"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBakeryAmt"
                     android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="25dp"
                     android:gravity="center"
                     tools:text="2500"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -892,7 +1155,7 @@
                     android:id="@+id/rgBeverages"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -905,34 +1168,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month12"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeveragesAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -964,7 +1249,7 @@
                     android:id="@+id/rgSnacks"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -977,34 +1262,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month13"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etSnacksAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_edittext_no_round"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1035,7 +1342,7 @@
                     android:id="@+id/rgBeauty"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1048,34 +1355,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month14"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBeautyAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1107,7 +1436,7 @@
                     android:id="@+id/rgCleaning"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1120,34 +1449,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month15"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etCleaningAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1178,7 +1529,7 @@
                     android:id="@+id/rgKitchen"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1191,34 +1542,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month16"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etKitchenAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1250,7 +1623,7 @@
                     android:id="@+id/rgBabyCare"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1263,34 +1636,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month17"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etBabyCareAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1321,7 +1716,7 @@
                     android:id="@+id/rgTransOut"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1334,34 +1729,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month18"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month18"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransOutAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1392,7 +1809,7 @@
                     android:id="@+id/rgTransIn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1405,34 +1822,56 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     >
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month19"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month19"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etTransInAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_edittext_no_round"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -1464,7 +1903,7 @@
                     android:id="@+id/rgOthers"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="3.5"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
@@ -1480,35 +1919,57 @@
 <!--                        android:layout_width="wrap_content"-->
 <!--                        android:layout_height="wrap_content"-->
 <!--                        android:orientation="horizontal">-->
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/daily"/>
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="@string/weekly"/>
-                        <RadioButton
-                            android:id="@+id/month20"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:checked="true"
-                            android:text="@string/monthly"/>
-<!--                    </LinearLayout>-->
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="D"
+                        android:textColor="@color/text_selector" />
+                    <RadioButton
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="W"
+                        android:textColor="@color/text_selector" />
+
+                    <RadioButton
+                        android:id="@+id/month20"
+                        android:gravity="center"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_background"
+                        android:button="@android:color/transparent"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="3dp"
+                        android:text="M"
+                        android:textColor="@color/text_selector" />
+
+                    <!--                    </LinearLayout>-->
                 </RadioGroup>
                 <EditText
                     android:id="@+id/etOthersAmt"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1.5"
                     android:gravity="center"
+                    android:background="@drawable/bg_edittext_no_round"
                     android:fontFamily="@font/campton_book"
                     tools:text="2500"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     />
             </LinearLayout>
 
