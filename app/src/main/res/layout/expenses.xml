@@ -1984,14 +1984,14 @@
 
           <ImageButton
               android:id="@+id/btnSubMitExp"
-              android:layout_width="131dp"
-              android:layout_height="67dp"
+              android:layout_width="140dp"
+              android:layout_height="85dp"
               android:layout_gravity="center"
               android:layout_marginBottom="10dp"
               android:layout_below="@id/cvExpenses"
               android:background="@color/white"
               android:scaleType="fitXY"
-              android:layout_marginTop="-75dp"
+              android:layout_marginTop="-80dp"
               android:src="@drawable/submit_exp"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintLeft_toLeftOf="parent"

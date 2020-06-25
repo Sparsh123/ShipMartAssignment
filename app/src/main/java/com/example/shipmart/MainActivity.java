@@ -25,7 +25,10 @@ import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import static java.lang.Math.round;
 
 public class MainActivity extends AppCompatActivity {
     EditText etSalary, etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
@@ -369,8 +372,9 @@ public class MainActivity extends AppCompatActivity {
                 exp= Double.parseDouble(et.getText().toString());
             }
         }
+        DecimalFormat df = new DecimalFormat("#.##");
 
-        return exp;
+        return Double.valueOf(df.format(exp));
     }
 
     private double getTotalExpense()
