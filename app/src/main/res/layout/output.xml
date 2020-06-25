@@ -493,10 +493,10 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="270dp"
+                    android:layout_height="301dp"
                     android:layout_gravity="center|bottom"
                     android:layout_marginTop="65dp"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/below" />
 
             </LinearLayout>
