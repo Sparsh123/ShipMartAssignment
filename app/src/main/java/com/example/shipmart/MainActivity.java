@@ -15,10 +15,17 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText etSalary, etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
@@ -40,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton ibSubmitExp, ibPrint, ibGo;
     View expensesScreen, outputScreen;
     double salarySaving =0, expenseSaving=0;
-    GraphView gvSaving;
+    BarChart gvSaving;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,15 +153,32 @@ public class MainActivity extends AppCompatActivity {
                     seekBarChangeExpenseSaveTrack(sb10, tv10);
                     seekBarChangeExpenseSaveTrack(sb20, tv20);
                     seekBarChangeExpenseSaveTrack(sb30, tv30);
-                    BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
-                            new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
-                            new DataPoint(1, getAmountAfterInvesting(1, 7)),
-                            new DataPoint(5, getAmountAfterInvesting(5, 8)),
-                            new DataPoint(10, getAmountAfterInvesting(10, 10)),
-                            new DataPoint(20, getAmountAfterInvesting(20, 12))
-                    });
-                    gvSaving.removeAllSeries();
-                    gvSaving.addSeries(series);
+
+                    ArrayList<BarEntry> entries = new ArrayList<>();
+                    entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
+                    entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
+                    entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
+                    entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
+                    entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+
+                    ArrayList<String> labels = new ArrayList<String>();
+                    labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
+                    labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
+                    labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
+                    labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
+                    labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+
+                    drawBarGraph(entries, labels);
+
+//                    BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+//                            new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+//                            new DataPoint(1, getAmountAfterInvesting(1, 7)),
+//                            new DataPoint(5, getAmountAfterInvesting(5, 8)),
+//                            new DataPoint(10, getAmountAfterInvesting(10, 10)),
+//                            new DataPoint(20, getAmountAfterInvesting(20, 12))
+//                    });
+//                    gvSaving.removeAllSeries();
+//                    gvSaving.addSeries(series);
 
                     Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
                             .show();
@@ -188,15 +212,32 @@ public class MainActivity extends AppCompatActivity {
                 seekBarChangeExpenseSaveTrack(sb10, tv10);
                 seekBarChangeExpenseSaveTrack(sb20, tv20);
                 seekBarChangeExpenseSaveTrack(sb30, tv30);
-                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
-                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
-                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
-                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
-                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
-                        new DataPoint(20, getAmountAfterInvesting(20, 12))
-                });
-                gvSaving.removeAllSeries();
-                gvSaving.addSeries(series);
+
+                ArrayList<BarEntry> entries = new ArrayList<>();
+                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
+                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
+                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
+                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
+                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+
+                ArrayList<String> labels = new ArrayList<String>();
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
+                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
+                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
+                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+
+                drawBarGraph(entries, labels);
+
+//                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
+//                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
+//                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
+//                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
+//                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
+//                        new DataPoint(20, getAmountAfterInvesting(20, 12))
+//                });
+//                gvSaving.removeAllSeries();
+//                gvSaving.addSeries(series);
 
                 Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
                         .show();
@@ -215,6 +256,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void drawBarGraph(ArrayList<BarEntry> entries, ArrayList<String> labels)
+    {
+        BarDataSet bardataset = new BarDataSet(entries, "Cells");
+        BarData data = new BarData(labels, bardataset);
+        gvSaving.setData(data); // set the data and list of labels into chart
+//        gvSaving.setDescription("Set Bar Chart Description Here");  // set the description
+        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        gvSaving.animateY(5000);
+
+
+
+    }
+
     private void seekBarChangeSalarySaveTrack(SeekBar sb, final TextView tv)
     {
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -224,15 +278,21 @@ public class MainActivity extends AppCompatActivity {
 
                 salarySaving = (progress*salary)/100;
                 tv.setText("₹ "+ String.valueOf(salarySaving));
-                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
-                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
-                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
-                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
-                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
-                        new DataPoint(20, getAmountAfterInvesting(20, 12))
-                });
-                gvSaving.removeAllSeries();
-                gvSaving.addSeries(series);
+                ArrayList<BarEntry> entries = new ArrayList<>();
+                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
+                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
+                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
+                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
+                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+
+                ArrayList<String> labels = new ArrayList<String>();
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
+                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
+                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
+                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+
+                drawBarGraph(entries, labels);
 
 
             }
@@ -256,14 +316,21 @@ public class MainActivity extends AppCompatActivity {
 
                 expenseSaving = (progress*saving)/100;
                 tv.setText("₹ " + String.valueOf(expenseSaving));
-                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
-                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
-                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
-                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
-                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
-                        new DataPoint(20, getAmountAfterInvesting(20, 12))
-                });
-                gvSaving.addSeries(series);
+                ArrayList<BarEntry> entries = new ArrayList<>();
+                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
+                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
+                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
+                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
+                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+
+                ArrayList<String> labels = new ArrayList<String>();
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
+                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
+                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
+                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+
+                drawBarGraph(entries, labels);
             }
 
             @Override
@@ -322,11 +389,11 @@ public class MainActivity extends AppCompatActivity {
         return exp;
     }
 
-    private double getAmountAfterInvesting(double time, int rate)
+    private int getAmountAfterInvesting(double time, int rate)
     {
         double principle=0, interest=0;
         principle = salarySaving + expenseSaving;
         interest = (principle*time*rate)/100;
-        return (principle+interest);
+        return (int)(principle+interest);
     }
 }
