@@ -2,6 +2,8 @@ package com.example.shipmart;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -106,6 +108,16 @@ public class MainActivity extends AppCompatActivity {
         gvSaving = findViewById(R.id.gvSaving);
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
+//        sb50.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+//        sb75.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+//        sb100.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+//
+//        sb10.getThumb().setColorFilter(Color.MAGENTA, PorterDuff.Mode.SRC_IN);
+//        sb20.getThumb().setColorFilter(Color.MAGENTA, PorterDuff.Mode.SRC_IN);
+//        sb30.getThumb().setColorFilter(Color.MAGENTA, PorterDuff.Mode.SRC_IN);
+
+
+
 
         ibGo.setOnClickListener(new View.OnClickListener() {
             @Override

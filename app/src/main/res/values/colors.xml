@@ -8,5 +8,7 @@
     <color name="white">#ffffff</color>
     <color name="purple">#ba9feb</color>
     <color name="blue">#7eb2ff</color>
+    <color name="myPrimaryColor">#660033</color>
+
 
 </resources>
