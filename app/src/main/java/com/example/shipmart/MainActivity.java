@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import static java.lang.Math.pow;
 import static java.lang.Math.round;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,11 +47,12 @@ public class MainActivity extends AppCompatActivity {
             cleaningExp = 0, kitchenExp = 0,
             babyCareExp = 0,
             transInExp = 0, transOutExp = 0, othersExp = 0;
+    ScrollView scroll;
     TextView tvCriteria, tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
     SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
     ImageButton ibSubmitExp, ibPrint, ibGo;
     View expensesScreen, outputScreen;
-    double salarySaving =0, expenseSaving=0;
+    double salarySaving =0, expenseSaving=0, savingGraph=0;
     BarChart gvSaving;
 
     @Override
@@ -118,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
         gvSaving = findViewById(R.id.gvSaving);
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
+        //expensesScreen.setFocusable(true);
+        scroll = findViewById(R.id.scroll);
+
 //        sb50.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 //        sb75.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
 //        sb100.getThumb().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
@@ -149,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
                     tv100.setText(String.valueOf((100*salary)/100));
                     salarySaving = (50*salary)/100;
                     expenseSaving = (10*saving)/100;
+                    scroll.fullScroll(View.FOCUS_DOWN);
+//                    scroll.scrollTo(0, scroll.getMaxScrollAmount ());
+
+
 
                     seekBarChangeSalarySaveTrack(sb50, tv50);
                     seekBarChangeSalarySaveTrack(sb75, tv75);
@@ -157,21 +167,21 @@ public class MainActivity extends AppCompatActivity {
                     seekBarChangeExpenseSaveTrack(sb20, tv20);
                     seekBarChangeExpenseSaveTrack(sb30, tv30);
 
-                    ArrayList<BarEntry> entries = new ArrayList<>();
-                    entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
-                    entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
-                    entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
-                    entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
-                    entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
-
-                    ArrayList<String> labels = new ArrayList<String>();
-                    labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
-                    labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
-                    labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
-                    labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
-                    labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
-
-                    drawBarGraph(entries, labels);
+//                    ArrayList<BarEntry> entries = new ArrayList<>();
+//                    entries.add(new BarEntry(getAmountAfterInvesting(1/12, 6), 1/12));
+//                    entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
+//                    entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
+//                    entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
+//                    entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+//
+//                    ArrayList<String> labels = new ArrayList<String>();
+//                    labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
+//                    labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
+//                    labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
+//                    labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
+//                    labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+//
+//                    drawBarGraph(entries, labels);
 
 //                    BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
 //                            new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
@@ -208,6 +218,8 @@ public class MainActivity extends AppCompatActivity {
                 salarySaving = (50*salary)/100;
                 expenseSaving = (10*saving)/100;
                 tvCriteria.setText("*(₹ " + salary +" - "+ "₹ "+getTotalExpense()+")");
+                savingGraph = (100*(salary-getTotalExpense())/100);
+
 
                 seekBarChangeSalarySaveTrack(sb50, tv50);
                 seekBarChangeSalarySaveTrack(sb75, tv75);
@@ -217,18 +229,18 @@ public class MainActivity extends AppCompatActivity {
                 seekBarChangeExpenseSaveTrack(sb30, tv30);
 
                 ArrayList<BarEntry> entries = new ArrayList<>();
-                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
-                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
-                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
-                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
-                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
+                entries.add(new BarEntry(getAmountAfterInvesting(1/12, 0.06), 1/12));
+                entries.add(new BarEntry(getAmountAfterInvesting(1,0.07), 1));
+                entries.add(new BarEntry(getAmountAfterInvesting(5,0.08), 5));
+                entries.add(new BarEntry(getAmountAfterInvesting(10,0.010), 10));
+                entries.add(new BarEntry(getAmountAfterInvesting(20,0.012), 20));
 
                 ArrayList<String> labels = new ArrayList<String>();
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
-                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
-                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
-                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 0.06)));
+                labels.add(String.valueOf(getAmountAfterInvesting(1, 0.07)));
+                labels.add(String.valueOf(getAmountAfterInvesting(5, 0.08)));
+                labels.add(String.valueOf(getAmountAfterInvesting(10, 0.010)));
+                labels.add(String.valueOf(getAmountAfterInvesting(20, 0.012)));
 
                 drawBarGraph(entries, labels);
 
@@ -393,11 +405,12 @@ public class MainActivity extends AppCompatActivity {
         return exp;
     }
 
-    private int getAmountAfterInvesting(double time, int rate)
+    private int getAmountAfterInvesting(double time, double rate)
     {
-        double principle=0, interest=0;
-        principle = salarySaving + expenseSaving;
-        interest = (principle*time*rate)/100;
-        return (int)(principle+interest);
+        double principle=0, interest=0, amount=0;
+        int n=1;
+        principle = savingGraph;
+        amount = principle* (pow((1 + (rate/n)),(n*time)));
+        return (int)amount;
     }
 }
