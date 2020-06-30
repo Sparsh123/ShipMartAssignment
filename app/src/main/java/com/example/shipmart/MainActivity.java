@@ -199,12 +199,12 @@ public class MainActivity extends AppCompatActivity {
                 tvSalary.setText("₹ "+String.valueOf(salary));
                 saving = salary-getTotalExpense();
                 tvSaving.setText("₹ "+String.valueOf(saving));
-                tv10.setText("₹ "+String.valueOf((10*saving)/100));
-                tv20.setText("₹ "+String.valueOf((20*saving)/100));
-                tv30.setText("₹ "+String.valueOf((30*saving)/100));
-                tv50.setText("₹ "+String.valueOf((50*salary)/100));
-                tv75.setText("₹ "+String.valueOf((75*salary)/100));
-                tv100.setText("₹ "+String.valueOf((100*salary)/100));
+                tv10.setText("₹ "+String.valueOf((10*getTotalExpense())/100));
+                tv20.setText("₹ "+String.valueOf((20*getTotalExpense())/100));
+                tv30.setText("₹ "+String.valueOf((30*getTotalExpense())/100));
+                tv50.setText("₹ "+String.valueOf((50*(saving))/100));
+                tv75.setText("₹ "+String.valueOf((75*(saving))/100));
+                tv100.setText("₹ "+String.valueOf((100*(saving))/100));
                 salarySaving = (50*salary)/100;
                 expenseSaving = (10*saving)/100;
                 tvCriteria.setText("*(₹ " + salary +" - "+ "₹ "+getTotalExpense()+")");
@@ -279,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
 
-                salarySaving = (progress*salary)/100;
+                salarySaving = (progress*(saving))/100;
                 tv.setText("₹ "+ String.valueOf(salarySaving));
                 ArrayList<BarEntry> entries = new ArrayList<>();
                 entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
