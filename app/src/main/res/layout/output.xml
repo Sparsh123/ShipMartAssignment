@@ -2,12 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_marginTop="25dp"
     android:focusable="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:orientation="vertical">
 
 
     <ScrollView
@@ -18,459 +17,461 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            android:visibility="visible"
-            android:id="@+id/cvOutput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:background="@drawable/bg_edittext"
-            android:orientation="vertical"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="10dp"
-            app:contentPadding="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvSalaryTxt">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvOutput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/outTitle"
-                    android:layout_width="286dp"
-                    android:layout_height="49dp"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:src="@drawable/output_intro_1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="15sp"
-                    android:text="@string/output_intro" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cvExpSav"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/bg_edittext"
-                    android:orientation="vertical"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="25dp"
-                    app:contentPadding="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal"
-                        >
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/tvSalaryTxt"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Your Monthly Salary" />
-
-                            <TextView
-                                android:id="@+id/tvSalary"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/campton_book"
-                                android:gravity="center"
-                                android:textColor="@color/purple"
-                                android:textSize="20sp"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="2dp"
-                            android:layout_height="80dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:background="#A9A9A9" />
-
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/tvSavingTxt"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Your Monthly Savings" />
-
-                            <TextView
-                                android:id="@+id/tvSaving"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/campton_book"
-                                android:gravity="start"
-                                android:textColor="@color/blue"
-                                android:textSize="20sp"
-                                tools:text="Rs. 25000" />
-                            <TextView
-                                android:visibility="visible"
-                                android:id="@+id/tvCriteria"
-                                android:layout_width="wrap_content"
-                                android:layout_height="35dp"
-                                android:layout_gravity="start"
-                                android:gravity="start"
-                                android:lines="2"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="#808080"
-                                android:textSize="10sp"
-                                tools:text="Rs. 25000-Rs. 4000" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="500dp"
-                    android:layout_height="30dp"
-                    android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:textColor="#A9A9A9" />
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/bg_edittext"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="10dp"
+                app:contentPadding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSalaryTxt">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="8"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/save_lumpsum"/>
-
-                        <ImageView
-                            android:layout_width="119dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="35dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:src="@drawable/illust1" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="28dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb50"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="50"
-                                android:progressDrawable="@drawable/progress"
-                                android:thumb="@drawable/custom_thumb" />
-
-
-
-                            <TextView
-                                android:id="@+id/tv50"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/blue"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb75"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="75"
-                                android:progressDrawable="@drawable/progress"
-                                android:thumb="@drawable/custom_thumb" />
-
-
-
-                            <TextView
-                                android:id="@+id/tv75"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/blue"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb100"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="100"
-                                android:progressDrawable="@drawable/progress"
-                                android:thumb="@drawable/custom_thumb" />
-
-
-                            <TextView
-                                android:id="@+id/tv100"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/blue"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-                    </LinearLayout>
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="230dp"
-                        android:layout_marginTop="110dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/line" />
+                        android:id="@+id/outTitle"
+                        android:layout_width="286dp"
+                        android:layout_height="49dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:src="@drawable/output_intro_1" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="8"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/save_expense"/>
-
-                        <ImageView
-                            android:layout_width="119dp"
-                            android:layout_height="90dp"
-                            android:gravity="center"
-                            android:layout_marginTop="18dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/illust2" />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb10"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="10"
-                                android:progressDrawable="@drawable/progress2"
-                                android:thumb="@drawable/custom_thumb2" />
-
-
-                            <TextView
-                                android:id="@+id/tv10"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/purple"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb20"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="20"
-                                android:progressDrawable="@drawable/progress2"
-                                android:thumb="@drawable/custom_thumb2" />
-
-
-                            <TextView
-                                android:id="@+id/tv20"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/purple"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:orientation="horizontal">
-
-                            <androidx.appcompat.widget.AppCompatSeekBar
-                                android:id="@+id/sb30"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:layout_weight="1"
-                                android:minHeight="10dp"
-                                android:progress="30"
-                                android:progressDrawable="@drawable/progress2"
-                                android:thumb="@drawable/custom_thumb2" />
-
-
-                            <TextView
-                                android:id="@+id/tv30"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
-                                android:fontFamily="@font/campton_book"
-                                android:textColor="@color/purple"
-                                tools:text="Rs. 25000" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="45dp"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="45dp"
-                    android:text="@string/graph_text" />
-
-<!--                <com.jjoe64.graphview.GraphView-->
-<!--                    android:id="@+id/gvSaving"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="200dip" />-->
-
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/gvSaving"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp" />
-
-                <ImageButton
-                    android:id="@+id/btnPrint"
-                    android:layout_width="110dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/print" />
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="130dp"
-                    android:layout_weight="0.2"
-                    android:gravity="center"
-                    android:src="@drawable/about_us" />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/output_intro"
+                        android:textSize="15sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvExpSav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bg_edittext"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="25dp"
+                        app:contentPadding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSalaryTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Your Monthly Salary" />
+
+                                <TextView
+                                    android:id="@+id/tvSalary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/campton_book"
+                                    android:gravity="center"
+                                    android:textColor="@color/purple"
+                                    android:textSize="20sp"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="80dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#A9A9A9" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvSavingTxt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Your Monthly Savings" />
+
+                                <TextView
+                                    android:id="@+id/tvSaving"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/campton_book"
+                                    android:gravity="start"
+                                    android:textColor="@color/blue"
+                                    android:textSize="20sp"
+                                    tools:text="Rs. 25000" />
+
+                                <TextView
+                                    android:id="@+id/tvCriteria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/campton_book"
+                                    android:gravity="start"
+                                    android:lines="2"
+                                    android:textColor="#808080"
+                                    android:textSize="10sp"
+                                    android:visibility="visible"
+                                    tools:text="Rs. 25000-Rs. 4000" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="500dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginTop="20dp"
-                        android:padding="10dp"
-                        android:gravity="left"
-                        android:textStyle="bold"
-                        android:text="@string/about_us_title"
-                        />
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                        android:textColor="#A9A9A9" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:padding="10dp"
-                    android:gravity="left"
-                    android:text="@string/about_us_text"
-                     />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/save_lumpsum" />
+
+                            <ImageView
+                                android:layout_width="119dp"
+                                android:layout_height="90dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="35dp"
+                                android:gravity="center"
+                                android:src="@drawable/illust1" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="28dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb50"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="50"
+                                    android:progressDrawable="@drawable/progress"
+                                    android:thumb="@drawable/custom_thumb" />
+
+
+                                <TextView
+                                    android:id="@+id/tv50"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/blue"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb75"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="75"
+                                    android:progressDrawable="@drawable/progress"
+                                    android:thumb="@drawable/custom_thumb" />
+
+
+                                <TextView
+                                    android:id="@+id/tv75"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/blue"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb100"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="100"
+                                    android:progressDrawable="@drawable/progress"
+                                    android:thumb="@drawable/custom_thumb" />
+
+
+                                <TextView
+                                    android:id="@+id/tv100"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/blue"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="110dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/line" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/save_expense" />
+
+                            <ImageView
+                                android:layout_width="119dp"
+                                android:layout_height="90dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="18dp"
+                                android:gravity="center"
+                                android:src="@drawable/illust2" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="10"
+                                    android:progressDrawable="@drawable/progress2"
+                                    android:thumb="@drawable/custom_thumb2" />
+
+
+                                <TextView
+                                    android:id="@+id/tv10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/purple"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb20"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="20"
+                                    android:progressDrawable="@drawable/progress2"
+                                    android:thumb="@drawable/custom_thumb2" />
+
+
+                                <TextView
+                                    android:id="@+id/tv20"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/purple"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatSeekBar
+                                    android:id="@+id/sb30"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:minHeight="10dp"
+                                    android:progress="30"
+                                    android:progressDrawable="@drawable/progress2"
+                                    android:thumb="@drawable/custom_thumb2" />
+
+
+                                <TextView
+                                    android:id="@+id/tv30"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.3"
+                                    android:fontFamily="@font/campton_book"
+                                    android:textColor="@color/purple"
+                                    tools:text="Rs. 25000" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginBottom="45dp"
+                        android:text="@string/graph_text"
+                        android:textSize="15sp" />
+
+                    <!--                <com.jjoe64.graphview.GraphView-->
+                    <!--                    android:id="@+id/gvSaving"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="200dip" />-->
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/gvSaving"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnPrint"
+                        android:layout_width="110dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/print" />
+
+
                 </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:src="@drawable/about_us" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:text="@string/about_us_title"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="3"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:text="@string/about_us_text" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <ImageView
                     android:layout_width="276dp"
@@ -506,7 +507,6 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </LinearLayout>

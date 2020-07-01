@@ -1,8 +1,5 @@
 package com.example.shipmart;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,12 +8,10 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
-import com.github.mikephil.charting.data.BarEntry;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 public class ExpenseActivity extends AppCompatActivity {
     EditText etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
@@ -76,8 +71,8 @@ public class ExpenseActivity extends AppCompatActivity {
         rgOthers = findViewById(R.id.rgOthers);
         ibSubmitExp = findViewById(R.id.btnSubMitExp);
 
-        if (getSupportActionBar()!=null)
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ibSubmitExp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,24 +104,24 @@ public class ExpenseActivity extends AppCompatActivity {
         int selectedId = rg.getCheckedRadioButtonId();
 
         // find the radiobutton by returned id
-        RadioButton radioButton = (RadioButton) findViewById(selectedId);
+        RadioButton radioButton = findViewById(selectedId);
 
         return radioButton.getText().toString();
     }
 
     private double getIndividualExpense(RadioGroup rg, EditText et) {
-        double exp=0;
+        double exp = 0;
         if (getExpenseType(rg).equalsIgnoreCase("D")) {
             if (!et.getText().toString().matches("")) {
-                exp=  Double.parseDouble(et.getText().toString()) * 30;
+                exp = Double.parseDouble(et.getText().toString()) * 30;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("W")) {
             if (!et.getText().toString().matches("")) {
-                exp= Double.parseDouble(et.getText().toString()) * 4.35;
+                exp = Double.parseDouble(et.getText().toString()) * 4.35;
             }
         } else if (getExpenseType(rg).equalsIgnoreCase("M")) {
             if (!et.getText().toString().matches("")) {
-                exp= Double.parseDouble(et.getText().toString());
+                exp = Double.parseDouble(et.getText().toString());
             }
         }
         DecimalFormat df = new DecimalFormat("#.##");
@@ -134,19 +129,18 @@ public class ExpenseActivity extends AppCompatActivity {
         return Double.valueOf(df.format(exp));
     }
 
-    private double getTotalExpense()
-    {
-        double exp=0;
-        exp = getIndividualExpense(rgDairy, etDairy) + getIndividualExpense(rgMeat, etMeat)+
-                getIndividualExpense(rgFruits, etFruits)+ getIndividualExpense(rgStreetFood, etStreetFood)+
-                getIndividualExpense(rgCafe, etCafe)+ getIndividualExpense(rgPub, etPub)+
-                getIndividualExpense(rgRestaurant, etRestaurant)+ getIndividualExpense(rgClothes, etClothes)+
-                getIndividualExpense(rgFootwear, etFootwear)+ getIndividualExpense(rgDaal, etDaal)+
-                getIndividualExpense(rgBakery, etBakery)+ getIndividualExpense(rgBeverages, etBeverages)+
-                getIndividualExpense(rgSnacks, etSnacks)+ getIndividualExpense(rgBeauty, etBeauty)+
-                getIndividualExpense(rgCleaning, etCleaning)+ getIndividualExpense(rgKitchen, etKitchen)+
-                getIndividualExpense(rgBabyCare, etBabyCare)+ getIndividualExpense(rgTransOut, etTransOut)+
-                getIndividualExpense(rgTransIn, etTransIn)+ getIndividualExpense(rgOthers, etOthers);
+    private double getTotalExpense() {
+        double exp = 0;
+        exp = getIndividualExpense(rgDairy, etDairy) + getIndividualExpense(rgMeat, etMeat) +
+                getIndividualExpense(rgFruits, etFruits) + getIndividualExpense(rgStreetFood, etStreetFood) +
+                getIndividualExpense(rgCafe, etCafe) + getIndividualExpense(rgPub, etPub) +
+                getIndividualExpense(rgRestaurant, etRestaurant) + getIndividualExpense(rgClothes, etClothes) +
+                getIndividualExpense(rgFootwear, etFootwear) + getIndividualExpense(rgDaal, etDaal) +
+                getIndividualExpense(rgBakery, etBakery) + getIndividualExpense(rgBeverages, etBeverages) +
+                getIndividualExpense(rgSnacks, etSnacks) + getIndividualExpense(rgBeauty, etBeauty) +
+                getIndividualExpense(rgCleaning, etCleaning) + getIndividualExpense(rgKitchen, etKitchen) +
+                getIndividualExpense(rgBabyCare, etBabyCare) + getIndividualExpense(rgTransOut, etTransOut) +
+                getIndividualExpense(rgTransIn, etTransIn) + getIndividualExpense(rgOthers, etOthers);
         return exp;
     }
 }
