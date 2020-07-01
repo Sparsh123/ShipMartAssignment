@@ -1,6 +1,7 @@
 package com.example.shipmart;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -74,6 +75,17 @@ public class ExpenseActivity extends AppCompatActivity {
         rgOthers = findViewById(R.id.rgOthers);
         ibSubmitExp = findViewById(R.id.btnSubMitExp);
 
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        // add back arrow to toolbar
+//        if (getSupportActionBar() != null){
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        }
+
+        if (getActionBar()!=null)
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         ibSubmitExp.setOnClickListener(new View.OnClickListener() {
             @Override

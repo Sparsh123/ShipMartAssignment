@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<ScrollView
+   <ScrollView
     android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -48,17 +48,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:fontFamily="@font/campton_book"-->
-<!--                android:gravity="center"-->
-<!--                android:text="@string/meaning_txt"-->
-<!--                android:textColor="@color/purple"-->
-<!--                android:textSize="18sp"-->
-<!--                />-->
-
                   <ImageView
                       android:layout_width="310dp"
                       android:layout_height="84dp"
@@ -69,126 +58,96 @@
 
                       />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight=".5"
-                    android:textColor="@color/blue"
-                    android:text="a. "/>
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="5dp"
+                      android:orientation="horizontal">
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="8dp"
+                          android:layout_weight=".5"
+                          android:textColor="@color/blue"
+                          android:text="a. "/>
 
-                <TextView
-                    android:id="@+id/tvDairy"
-                    android:lines="3"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_marginRight="7dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dairy"
-                    android:fontFamily="@font/campton_book"
-                    android:textSize="12sp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintEnd_toStartOf="@id/rgDairy"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="@id/rgDairy"
-                    app:layout_constraintStart_toStartOf="parent" />
-                <RadioGroup
-                    android:id="@+id/rgDairy"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="3.5"
-                    android:orientation="horizontal"
-                    android:checkedButton="@id/month"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/tvDairy"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tvDairy"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    >
+                      <TextView
+                          android:id="@+id/tvDairy"
+                          android:lines="3"
+                          android:layout_width="0dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_weight="3"
+                          android:layout_height="wrap_content"
+                          android:text="@string/dairy"
+                         />
+                      <RadioGroup
+                          android:id="@+id/rgDairy"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_weight="3.5"
+                          android:layout_marginLeft="5dp"
+                          android:layout_marginTop="15dp"
+                          android:orientation="horizontal"
+                          android:checkedButton="@id/month2"
+                          app:layout_constraintEnd_toEndOf="parent"
+                          app:layout_constraintLeft_toRightOf="@id/tvDairy"
+                          app:layout_constraintRight_toRightOf="parent"
+                          app:layout_constraintStart_toEndOf="@id/tvDairy"
+                          app:layout_constraintTop_toTopOf="parent"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          >
 
-<!--                        <RadioButton-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginLeft="5dp"-->
-<!--                            android:textSize="10sp"-->
-<!--                            android:background="@drawable/radio_background"-->
-<!--                            android:text="@string/daily"/>-->
-<!--                        <RadioButton-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:background="@drawable/radio_background"-->
-<!--                           android:gravity="center"-->
-<!--                            android:textSize="10sp"-->
+                          <RadioButton
+                              android:gravity="center"
+                              android:layout_width="45dp"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/radio_background"
+                              android:button="@android:color/transparent"
+                              android:paddingLeft="16dp"
+                              android:paddingTop="3dp"
+                              android:paddingRight="16dp"
+                              android:paddingBottom="3dp"
+                              android:text="D"
+                              android:textColor="@color/text_selector" />
+                          <RadioButton
+                              android:gravity="center"
+                              android:layout_width="45dp"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/radio_background"
+                              android:button="@android:color/transparent"
+                              android:paddingLeft="16dp"
+                              android:paddingTop="3dp"
+                              android:paddingRight="16dp"
+                              android:paddingBottom="3dp"
+                              android:text="W"
+                              android:textColor="@color/text_selector" />
 
-<!--                            android:text="@string/weekly"/>-->
-                    <RadioButton
-                        android:gravity="center"
-                        android:layout_width="45dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/radio_background"
-                        android:button="@android:color/transparent"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="3dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="3dp"
-                        android:text="D"
-                        android:textColor="@color/text_selector" />
-                    <RadioButton
-                        android:gravity="center"
-                        android:layout_width="45dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/radio_background"
-                        android:button="@android:color/transparent"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="3dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="3dp"
-                        android:text="W"
-                        android:textColor="@color/text_selector" />
+                          <RadioButton
+                              android:id="@+id/month2"
+                              android:gravity="center"
+                              android:layout_width="45dp"
+                              android:layout_height="wrap_content"
+                              android:background="@drawable/radio_background"
+                              android:button="@android:color/transparent"
+                              android:paddingLeft="16dp"
+                              android:paddingTop="3dp"
+                              android:paddingRight="16dp"
+                              android:paddingBottom="3dp"
+                              android:text="M"
+                              android:textColor="@color/text_selector" />
 
-                    <RadioButton
-                        android:id="@+id/month"
-                        android:gravity="center"
-                        android:layout_width="45dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/radio_background"
-                        android:button="@android:color/transparent"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="3dp"
-                        android:paddingRight="16dp"
-                        android:paddingBottom="3dp"
-                        android:text="M"
-                        android:textColor="@color/text_selector" />
-
-<!--                        <RadioButton-->
-<!--                            android:id="@+id/month"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:textSize="10sp"-->
-<!--                            android:background="@drawable/radio_background"-->
-
-<!--                            android:text="@string/monthly"/>-->
-                </RadioGroup>
-                <EditText
-                    android:id="@+id/etDairyAmt"
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/bg_edittext_no_round"
-                    android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
-                    android:gravity="center"
-                    tools:text="2500"
-                   />
-
-            </LinearLayout>
-
+                      </RadioGroup>
+                      <EditText
+                          android:id="@+id/etDairyAmt"
+                          android:layout_width="0dp"
+                          android:layout_height="25dp"
+                          android:background="@drawable/bg_edittext_no_round"
+                          android:layout_weight="1.5"
+                          android:gravity="center"
+                          tools:text="2500"
+                          android:layout_marginTop="15dp"
+                          />
+                  </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -210,7 +169,6 @@
                     android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/meat"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -278,7 +236,6 @@
                     android:layout_height="25dp"
                     android:background="@drawable/bg_edittext_no_round"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     android:layout_marginTop="15dp"
@@ -304,7 +261,6 @@
                     android:layout_weight="3"
                     android:layout_marginTop="8dp"
                     android:text="@string/fruits"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -373,7 +329,6 @@
                     android:layout_weight="1.5"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     />
@@ -398,7 +353,6 @@
                     android:layout_weight="3"
                     android:text="@string/street_food"
                     android:layout_marginTop="9dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -466,7 +420,6 @@
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     android:layout_marginTop="10dp"
@@ -492,7 +445,6 @@
                     android:layout_weight="3"
                     android:text="@string/cafe"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -560,7 +512,6 @@
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     android:layout_marginTop="5dp"
@@ -586,7 +537,6 @@
                     android:layout_weight="3"
                     android:text="@string/pub"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -655,7 +605,6 @@
                     android:layout_weight="1.5"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     tools:text="2500"
                     android:layout_marginTop="5dp"
                     />
@@ -680,7 +629,6 @@
                     android:layout_weight="3"
                     android:text="@string/restaurant"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -749,7 +697,6 @@
                     android:layout_weight="1.5"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     tools:text="2500"
                     android:layout_marginTop="5dp"
                     />
@@ -774,7 +721,6 @@
                     android:layout_weight="3"
                     android:text="@string/clothes"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -840,7 +786,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:background="@drawable/bg_edittext_no_round"
                     android:gravity="center"
                     tools:text="2500"
@@ -868,7 +813,6 @@
                     android:layout_weight="3"
                     android:text="@string/footwear"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -957,7 +901,6 @@
                     android:id="@+id/tvDaal"
                     android:lines="3"
                     android:layout_width="0dp"
-                    android:fontFamily="@font/campton_book"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:text="@string/daal"
@@ -1030,7 +973,6 @@
                     android:layout_weight="1.5"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     tools:text="2500"
                     android:layout_marginTop="10dp"
                     />
@@ -1055,7 +997,6 @@
                     android:text="@string/bakery"
                     android:lines="1"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1125,7 +1066,6 @@
                     android:gravity="center"
                     tools:text="2500"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     android:layout_marginTop="5dp"
                     />
             </LinearLayout>
@@ -1144,7 +1084,6 @@
                 <TextView
                     android:id="@+id/tvBeverages"
                     android:lines="1"
-                    android:fontFamily="@font/campton_book"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -1217,7 +1156,6 @@
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     android:layout_marginTop="5dp"
@@ -1243,7 +1181,6 @@
                     android:layout_weight="3"
                     android:layout_height="wrap_content"
                     android:text="@string/snacks"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1311,7 +1248,6 @@
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
                     android:gravity="center"
-                    android:fontFamily="@font/campton_book"
                     tools:text="2500"
                     android:background="@drawable/bg_edittext_no_round"
                     android:layout_marginTop="10dp"
@@ -1336,7 +1272,6 @@
                     android:layout_weight="3"
                     android:text="@string/beauty"
                     android:layout_marginTop="2dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1403,7 +1338,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
@@ -1428,7 +1362,6 @@
                     android:layout_width="0dp"
                     android:layout_marginTop="3dp"
                     android:layout_weight="3"
-                    android:fontFamily="@font/campton_book"
                     android:layout_height="wrap_content"
                     android:text="@string/cleaning"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
@@ -1497,7 +1430,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
@@ -1523,7 +1455,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/kitchen"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1592,7 +1523,6 @@
                     android:layout_weight="1.5"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
-                    android:fontFamily="@font/campton_book"
                     tools:text="2500"
                     android:layout_marginTop="5dp"
                     />
@@ -1617,7 +1547,6 @@
                     android:layout_weight="3"
                     android:text="@string/babycare"
                     android:layout_marginTop="2dp"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1684,7 +1613,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
@@ -1709,7 +1637,6 @@
                     android:layout_marginTop="2dp"
                     android:layout_weight="3"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/campton_book"
                     android:text="@string/transport_out"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -1777,7 +1704,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     android:background="@drawable/bg_edittext_no_round"
                     tools:text="2500"
@@ -1803,7 +1729,6 @@
                     android:layout_weight="3"
                     android:layout_marginTop="2dp"
                     android:text="@string/transport_in"
-                    android:fontFamily="@font/campton_book"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toLeftOf="@id/rgDairy"
@@ -1870,7 +1795,6 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1.5"
-                    android:fontFamily="@font/campton_book"
                     android:gravity="center"
                     tools:text="2500"
                     android:background="@drawable/bg_edittext_no_round"
@@ -1896,7 +1820,6 @@
                     android:layout_weight="3"
                     android:layout_height="match_parent"
                     android:text="@string/others"
-                    android:fontFamily="@font/campton_book"
                     android:layout_marginTop="12dp"
                     app:layout_constraintEnd_toStartOf="@id/rgDairy"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -2001,6 +1924,13 @@
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toBottomOf="@id/cvExpenses" />
 
-</LinearLayout>
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="301dp"
+              android:layout_gravity="center|bottom"
+              android:layout_marginTop="65dp"
+              android:scaleType="centerCrop"
+              android:src="@drawable/below" />
+      </LinearLayout>
 </ScrollView>
 </LinearLayout>
