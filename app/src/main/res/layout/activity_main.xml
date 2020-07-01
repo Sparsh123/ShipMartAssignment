@@ -18,37 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--            <ImageView-->
-<!--                android:id="@+id/tvIntro"-->
-<!--                android:layout_width="392dp"-->
-<!--                android:layout_height="170dp"-->
-
-<!--                android:src="@drawable/intro_txt"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintHorizontal_bias="1.0"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/ivLogo" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/tvSalaryTxt"-->
-<!--                android:fontFamily="@font/campton_book"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="30dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="@string/monthly_salary_text"-->
-<!--                android:textColor="@color/lightPurple"-->
-<!--                android:textSize="18sp"-->
-<!--                android:textStyle="bold"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:layout_constraintRight_toRightOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/ivLogo" />-->
-
-
             <ImageView
                 android:id="@+id/ivLogo"
                 android:layout_width="343dp"
@@ -115,32 +84,6 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btnGo"/>
-
-
-
-            <include
-                android:id="@+id/expenses"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnGo"
-                layout="@layout/expenses" />
-
-            <include
-                android:id="@+id/output"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/expenses"
-                layout="@layout/output" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

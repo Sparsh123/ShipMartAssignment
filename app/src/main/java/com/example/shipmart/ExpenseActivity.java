@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class ExpenseActivity extends AppCompatActivity {
-    EditText etSalary, etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
+    EditText etDairy, etMeat, etFruits, etStreetFood, etCafe, etPub, etRestaurant, etClothes,
             etFootwear, etDaal, etBakery, etBeverages, etSnacks, etBeauty, etCleaning, etKitchen, etBabyCare,
             etTransIn, etTransOut, etOthers;
 
@@ -84,58 +84,6 @@ public class ExpenseActivity extends AppCompatActivity {
                 intent.putExtra("Salary", salary);
                 intent.putExtra("Expense", getTotalExpense());
                 startActivity(intent);
-
-//                outputScreen.setVisibility(View.VISIBLE);
-//                tvSalary.setText("₹ "+String.valueOf(salary));
-//                saving = salary-getTotalExpense();
-//                tvSaving.setText("₹ "+String.valueOf(saving));
-//                tv10.setText("₹ "+String.valueOf((10*getTotalExpense())/100));
-//                tv20.setText("₹ "+String.valueOf((20*getTotalExpense())/100));
-//                tv30.setText("₹ "+String.valueOf((30*getTotalExpense())/100));
-//                tv50.setText("₹ "+String.valueOf((50*(saving))/100));
-//                tv75.setText("₹ "+String.valueOf((75*(saving))/100));
-//                tv100.setText("₹ "+String.valueOf((100*(saving))/100));
-//                salarySaving = (50*salary)/100;
-//                expenseSaving = (10*saving)/100;
-//                tvCriteria.setText("*(₹ " + salary +" - "+ "₹ "+getTotalExpense()+")");
-//                savingGraph = (100*(salary-getTotalExpense())/100);
-
-
-//                seekBarChangeSalarySaveTrack(sb50, tv50);
-//                seekBarChangeSalarySaveTrack(sb75, tv75);
-//                seekBarChangeSalarySaveTrack(sb100, tv100);
-//                seekBarChangeExpenseSaveTrack(sb10, tv10);
-//                seekBarChangeExpenseSaveTrack(sb20, tv20);
-//                seekBarChangeExpenseSaveTrack(sb30, tv30);
-//
-//                ArrayList<BarEntry> entries = new ArrayList<>();
-//                entries.add(new BarEntry(getAmountAfterInvesting(1/12, 0.06), 1/12));
-//                entries.add(new BarEntry(getAmountAfterInvesting(1,0.07), 1));
-//                entries.add(new BarEntry(getAmountAfterInvesting(5,0.08), 5));
-//                entries.add(new BarEntry(getAmountAfterInvesting(10,0.010), 10));
-//                entries.add(new BarEntry(getAmountAfterInvesting(20,0.012), 20));
-//
-//                ArrayList<String> labels = new ArrayList<String>();
-//                labels.add(String.valueOf(getAmountAfterInvesting(1, 0.06)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(1, 0.07)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(5, 0.08)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(10, 0.010)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(20, 0.012)));
-//
-//                drawBarGraph(entries, labels);
-
-//                BarGraphSeries<DataPoint> series = new BarGraphSeries<DataPoint>(new DataPoint[] {
-//                        new DataPoint(0.083, getAmountAfterInvesting(0.083, 6)),
-//                        new DataPoint(1, getAmountAfterInvesting(1, 7)),
-//                        new DataPoint(5, getAmountAfterInvesting(5, 8)),
-//                        new DataPoint(10, getAmountAfterInvesting(10, 10)),
-//                        new DataPoint(20, getAmountAfterInvesting(20, 12))
-//                });
-//                gvSaving.removeAllSeries();
-//                gvSaving.addSeries(series);
-
-                Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
-                        .show();
 
             }
         });

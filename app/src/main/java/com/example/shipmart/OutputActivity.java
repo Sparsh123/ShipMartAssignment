@@ -27,9 +27,6 @@ public class OutputActivity extends AppCompatActivity {
     BarChart gvSaving;
     double salarySaving =0, expenseSaving=0, savingGraph=0, salary=0, expense=0, saving=0;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +52,7 @@ public class OutputActivity extends AppCompatActivity {
         salary = getIntent().getDoubleExtra("Salary", 0);
         expense = getIntent().getDoubleExtra("Expense", 0);
 
-        tvSalary.setText("₹ "+String.valueOf(salary));
+                tvSalary.setText("₹ "+String.valueOf(salary));
                 saving = salary-expense;
                 tvSaving.setText("₹ "+String.valueOf(saving));
                 tv10.setText("₹ "+String.valueOf((10*expense)/100));
@@ -68,7 +65,6 @@ public class OutputActivity extends AppCompatActivity {
                 expenseSaving = (10*saving)/100;
                 tvCriteria.setText("*(₹ " + salary +" - "+ "₹ "+expense+")");
                 savingGraph = (100*(salary-expense)/100);
-
 
                 seekBarChangeSalarySaveTrack(sb50, tv50);
                 seekBarChangeSalarySaveTrack(sb75, tv75);
@@ -93,15 +89,6 @@ public class OutputActivity extends AppCompatActivity {
 
                 drawBarGraph(entries, labels);
 
-
-
-        Toast.makeText(getApplicationContext(), "Please Scroll Down", Toast.LENGTH_LONG)
-                .show();
-
-
-
-
-
         ibPrint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,12 +103,8 @@ public class OutputActivity extends AppCompatActivity {
         BarDataSet bardataset = new BarDataSet(entries, "Cells");
         BarData data = new BarData(labels, bardataset);
         gvSaving.setData(data); // set the data and list of labels into chart
-//        gvSaving.setDescription("Set Bar Chart Description Here");  // set the description
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
         gvSaving.animateY(5000);
-
-
-
     }
 
     private void seekBarChangeSalarySaveTrack(SeekBar sb, final TextView tv)
@@ -130,7 +113,6 @@ public class OutputActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
-
                 savingGraph = (progress*(saving))/100;
                 tv.setText("₹ "+ String.valueOf(salarySaving));
                 ArrayList<BarEntry> entries = new ArrayList<>();
@@ -148,14 +130,10 @@ public class OutputActivity extends AppCompatActivity {
                 labels.add(String.valueOf(getAmountAfterInvesting(20, 0.012)));
 
                 drawBarGraph(entries, labels);
-
-
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
@@ -169,46 +147,24 @@ public class OutputActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 expenseSaving=(progress*expense)/100;
-
                 tv.setText("₹ " + String.valueOf(expenseSaving));
-//                ArrayList<BarEntry> entries = new ArrayList<>();
-//                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
-//                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
-//                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
-//                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
-//                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
-//
-//                ArrayList<String> labels = new ArrayList<String>();
-//                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
-//                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
-//
-//                drawBarGraph(entries, labels);
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
     }
 
-
-
-
     private int getAmountAfterInvesting(double time, double rate)
     {
-        double principle=0, interest=0, amount=0;
+        double principle=0, amount=0;
         int n=1;
         principle = savingGraph;
         amount = principle* (pow((1 + (rate/n)),(n*time)));
         DecimalFormat df = new DecimalFormat("#.##");
-
         double retVal = Double.valueOf(df.format(amount));
         return (int)retVal;
     }
