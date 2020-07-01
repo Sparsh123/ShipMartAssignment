@@ -46,12 +46,8 @@ public class MainActivity extends AppCompatActivity {
             babyCareExp = 0,
             transInExp = 0, transOutExp = 0, othersExp = 0;
     ScrollView scroll;
-    TextView tvCriteria, tvSalary, tvSaving, tv10, tv20, tv30, tv50, tv75, tv100;
-    SeekBar sb10, sb20, sb30, sb50, sb75, sb100;
-    ImageButton ibSubmitExp, ibPrint, ibGo;
+    ImageButton  ibGo;
     View expensesScreen, outputScreen;
-    double salarySaving =0, expenseSaving=0, savingGraph=0;
-    BarChart gvSaving;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,23 +56,7 @@ public class MainActivity extends AppCompatActivity {
         etSalary = findViewById(R.id.etSalary);
 
         ibGo = findViewById(R.id.btnGo);
-        ibPrint = findViewById(R.id.btnPrint);
-        tvSalary = findViewById(R.id.tvSalary);
-        tvSaving = findViewById(R.id.tvSaving);
-        sb10=findViewById(R.id.sb10);
-        sb20=findViewById(R.id.sb20);
-        sb30=findViewById(R.id.sb30);
-        sb50=findViewById(R.id.sb50);
-        sb75=findViewById(R.id.sb75);
-        sb100=findViewById(R.id.sb100);
-        tv10=findViewById(R.id.tv10);
-        tv20=findViewById(R.id.tv20);
-        tv30=findViewById(R.id.tv30);
-        tv50=findViewById(R.id.tv50);
-        tv75=findViewById(R.id.tv75);
-        tv100=findViewById(R.id.tv100);
-        tvCriteria=findViewById(R.id.tvCriteria);
-        gvSaving = findViewById(R.id.gvSaving);
+
         expensesScreen = findViewById(R.id.expenses);
         outputScreen = findViewById(R.id.output);
         //expensesScreen.setFocusable(true);
@@ -164,113 +144,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ibPrint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Printer Is Not Connected To Your Device", Toast.LENGTH_LONG).show();
-            }
-        });
+
 
 
 
     }
 
-    private void drawBarGraph(ArrayList<BarEntry> entries, ArrayList<String> labels)
-    {
-        BarDataSet bardataset = new BarDataSet(entries, "Cells");
-        BarData data = new BarData(labels, bardataset);
-        gvSaving.setData(data); // set the data and list of labels into chart
-//        gvSaving.setDescription("Set Bar Chart Description Here");  // set the description
-        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
-        gvSaving.animateY(5000);
 
-
-
-    }
-
-    private void seekBarChangeSalarySaveTrack(SeekBar sb, final TextView tv)
-    {
-        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-
-                salarySaving = (progress*(saving))/100;
-                tv.setText("₹ "+ String.valueOf(salarySaving));
-                ArrayList<BarEntry> entries = new ArrayList<>();
-                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
-                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
-                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
-                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
-                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
-
-                ArrayList<String> labels = new ArrayList<String>();
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
-                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
-                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
-                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
-
-                drawBarGraph(entries, labels);
-
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
-    }
-
-    private void seekBarChangeExpenseSaveTrack(SeekBar sb, final TextView tv)
-    {
-        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress,
-                                          boolean fromUser) {
-
-                expenseSaving = (progress*saving)/100;
-                tv.setText("₹ " + String.valueOf(expenseSaving));
-                ArrayList<BarEntry> entries = new ArrayList<>();
-                entries.add(new BarEntry(getAmountAfterInvesting(1, 6), 0));
-                entries.add(new BarEntry(getAmountAfterInvesting(1,7), 1));
-                entries.add(new BarEntry(getAmountAfterInvesting(5,8), 2));
-                entries.add(new BarEntry(getAmountAfterInvesting(10,10), 3));
-                entries.add(new BarEntry(getAmountAfterInvesting(20,12), 4));
-
-                ArrayList<String> labels = new ArrayList<String>();
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 6)));
-                labels.add(String.valueOf(getAmountAfterInvesting(1, 7)));
-                labels.add(String.valueOf(getAmountAfterInvesting(5, 8)));
-                labels.add(String.valueOf(getAmountAfterInvesting(10, 10)));
-                labels.add(String.valueOf(getAmountAfterInvesting(20, 12)));
-
-                drawBarGraph(entries, labels);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
-    }
-
-
-
-
-    private int getAmountAfterInvesting(double time, double rate)
-    {
-        double principle=0, interest=0, amount=0;
-        int n=1;
-        principle = savingGraph;
-        amount = principle* (pow((1 + (rate/n)),(n*time)));
-        return (int)amount;
-    }
 }
