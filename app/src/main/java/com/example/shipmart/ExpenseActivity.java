@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -75,17 +76,8 @@ public class ExpenseActivity extends AppCompatActivity {
         rgOthers = findViewById(R.id.rgOthers);
         ibSubmitExp = findViewById(R.id.btnSubMitExp);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        // add back arrow to toolbar
-//        if (getSupportActionBar() != null){
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//            getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        }
-
-        if (getActionBar()!=null)
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar()!=null)
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ibSubmitExp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +92,16 @@ public class ExpenseActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private String getExpenseType(RadioGroup rg) {

@@ -3,6 +3,7 @@ package com.example.shipmart;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
@@ -48,6 +49,9 @@ public class OutputActivity extends AppCompatActivity {
         tv100=findViewById(R.id.tv100);
         tvCriteria=findViewById(R.id.tvCriteria);
         gvSaving = findViewById(R.id.gvSaving);
+
+        if (getSupportActionBar()!=null)
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         salary = getIntent().getDoubleExtra("Salary", 0);
         expense = getIntent().getDoubleExtra("Expense", 0);
@@ -97,6 +101,17 @@ public class OutputActivity extends AppCompatActivity {
         });
 
 }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            finish(); // close this activity and return to preview activity (if there is any)
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     private void drawBarGraph(ArrayList<BarEntry> entries, ArrayList<String> labels)
     {
